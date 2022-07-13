@@ -1,15 +1,382 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>CURSO ESCOLAR</title>
-	<link rel="stylesheet" type="text/css" href="./inicio.css">
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">	
-	<script type="text/javascript" src="./inicio.js"></script>
+<title>LENGUA</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif
+}
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
 </head>
-<body>
-	<div align="center" class="w3-panel w3-padding-16 w3-light-grey">
-    <h2>LENGUA CASTELLANA Y LITERATURA</h2>
-   </div>
+<body class="w3-theme-l5">
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="./index1.html" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Inicio</a>
+  <a href="./clase.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News">Clase</a>
+  <a href="./casa.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings">Casa</a>
+  <a href="./Extraescolares.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages">Extraescolares</a>
+   <a href="./mespacio.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages">Mi espacio</a>
+
+  </a>
+ </div>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large">My Profile</a>
+</div>
+
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
+  <!-- The Grid -->
+  <div class="w3-row">
+    <!-- Left Column -->
+    <div class="w3-col m3">
+      <!-- Profile -->
+      <div class="w3-card w3-round w3-white">
+        <div class="w3-container">
+         <h4 class="w3-center">PERFIL</h4>
+         <p class="w3-center"><img src="https://us.123rf.com/450wm/liravega258/liravega2581901/liravega258190100016/122214182-estudio-de-dise%C3%B1o-dise%C3%B1o-dibujo-fotograf%C3%ADa-dise%C3%B1o-gr%C3%A1fico-educaci%C3%B3n-creatividad-arte-ideas-ilustraci.jpg" class="w3-circle" style="height:200px;width:200px" alt="Avatar"></p>
+         <hr>
+         <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Elena León</p>
+         <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> Madrid, Spain</p>
+         <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> 13 junio, 2007</p>
+        </div>
+      </div>
+      <br>
+      
+      <!-- Accordion -->
+      <div class="w3-card w3-round">
+        <div class="w3-white">
+          <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i>DATOS</button>
+          <div id="Demo1" class="w3-hide w3-container">
+            <p>Número de unidades:__<br>
+               días que tenemos clase:___
+            </p>
+          </div>
+      
+          <button onclick="myFunction('Demo3')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-users fa-fw w3-margin-right"></i> Vídeos de lengua</button>
+          <div id="Demo3" class="w3-hide w3-container">
+          	<p><button class="w3-button w3-block w3-theme-l4" onclick="vlengua()">VER</button></p>
+         <div class="w3-row-padding">
+         <br>
+           
+         </div>
+          </div>
+        </div>      
+      </div>
+      <br>
+      <!-- Alert Box -->
+      <div class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
+        <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l3 w3-display-topright">
+          <i class="fa fa-remove"></i>
+        </span>
+        <p><strong>Hey!</strong></p>
+        <p>Aquí va un video que te puede interesar</p>
+        <iframe width="300" height="200" src="https://www.youtube.com/embed/AWVyKJNsx9I" title="Los lunnis de leyenda -Cervantes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="300" height="200" src="https://www.youtube.com/embed/KWzJ71RF-as" title="LUNNIS DE LEYENDA – Magallanes y Elcano (Videoclip oficial)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       </div>
+    <!-- End Left Column -->
+    </div>
+    
+    <!-- Middle Column -->
+    <div class="w3-col m7"> 
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <h2 align="center">ESQUEMAS DE LENGUA<h2>
+       <h4 align="center"> ESCOGE EL ESQUEMA QUE QUIERAS</h4><br>
+        <hr class="w3-clear">
+        <div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=910x10000:format=png/path/s33bfe6ee0378f545/image/i995c5d08f236741d/version/1548071290/image.png" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="http://www.iesdonbosco.com/data/lengua/4_eso._esquema_inicial_romanticismo.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="https://3.bp.blogspot.com/-Qte1d3-ki48/V_omF1BPhhI/AAAAAAAAAJQ/IBauQ2ORuHQWEV2vE49owjA97rMP7f68QCLcB/s1600/Diapositiva2.JPG" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="http://www.jgvaldemora.org/blog/lenguayliteratura/wp-content/uploads/2014/05/slide-41-728.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="http://hn.tiching.com/uploads/contents/2013/08/15/104785_1376564007.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="https://2.bp.blogspot.com/-pOOj9c-wPX4/WmY6ZsM-suI/AAAAAAAAB7s/3-ml_uha6BMi1RLJMCH3u-qI52zX8XtQACKgBGAs/s1600/Scan0017.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="https://image.jimcdn.com/app/cms/image/transf/dimension=910x10000:format=png/path/s33bfe6ee0378f545/image/i995c5d08f236741d/version/1548071290/image.png" style="width:100%" onclick="currentSlide(1)" alt="esquema 1">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="http://www.iesdonbosco.com/data/lengua/4_eso._esquema_inicial_romanticismo.jpg" style="width:100%" onclick="currentSlide(2)"alt="esquema 2">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://3.bp.blogspot.com/-Qte1d3-ki48/V_omF1BPhhI/AAAAAAAAAJQ/IBauQ2ORuHQWEV2vE49owjA97rMP7f68QCLcB/s1600/Diapositiva2.JPG" style="width:100%" onclick="currentSlide(3)" alt="esquema 3">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="http://www.jgvaldemora.org/blog/lenguayliteratura/wp-content/uploads/2014/05/slide-41-728.jpg" style="width:100%" onclick="currentSlide(4)" alt="esquema 4">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="http://hn.tiching.com/uploads/contents/2013/08/15/104785_1376564007.jpg" style="width:100%" onclick="currentSlide(5)" alt="esquema 5">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="https://2.bp.blogspot.com/-pOOj9c-wPX4/WmY6ZsM-suI/AAAAAAAAB7s/3-ml_uha6BMi1RLJMCH3u-qI52zX8XtQACKgBGAs/s1600/Scan0017.jpg" style="width:100%" onclick="currentSlide(6)" alt="esquema 6">
+    </div>
+  </div>
+</div>
+      </div>
+      
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <h4>LIBROS y APUNTES</h4><br>
+        <hr class="w3-clear">
+        <p>aquí voy a insertar un pdf del libro</p>
+      </div>  
+      
+    <!-- End Middle Column -->
+    </div>
+    
+    <!-- Right Column -->
+    <div class="w3-col m2">
+      <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+          <p>RAE</p>
+          <img src="https://www.dykinson.com/static/img/portadas/9788467041897.jpg" alt="Forest" style="width:100%;">
+          <p><strong>Diccionario de la lengua</strong></p>
+          <p>revisa la palabra que quieras:</p>
+          <p><button class="w3-button w3-block w3-theme-l4" onclick="rae()">ENTRAR</button></p>
+        </div>
+      </div>
+      <br>
+      
+      <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+          <p>Friend Request</p>
+          <img src="/w3images/avatar6.png" alt="Avatar" style="width:50%"><br>
+          <span>Jane Doe</span>
+          <div class="w3-row w3-opacity">
+            <div class="w3-half">
+              <button class="w3-button w3-block w3-green w3-section" title="Accept"><i class="fa fa-check"></i></button>
+            </div>
+            <div class="w3-half">
+              <button class="w3-button w3-block w3-red w3-section" title="Decline"><i class="fa fa-remove"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      
+      <div class="w3-card w3-round w3-white w3-padding-16 w3-center">
+        <p>ADS</p>
+      </div>
+      <br>
+      
+      <div class="w3-card w3-round w3-white w3-padding-32 w3-center">
+        <p><i class="fa fa-bug w3-xxlarge"></i></p>
+      </div>
+      
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+<!-- End Page Container -->
+</div>
+<br>
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-d3 w3-padding-16">
+  <h5>Footer</h5>
+</footer>
+
+<footer class="w3-container w3-theme-d5">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+ 
+<script>
+// Accordion
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-theme-d1";
+  } else { 
+    x.className = x.className.replace("w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-theme-d1", "");
+  }
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+function vlengua() {
+  window.open("https://www.youtube.com/watch?v=_CkLVnmW3xA&list=PLRPdp2X-BOsAlv8_i18tXbsNDUiUpB8k_")
+}
+function rae() {
+  window.open("https://dle.rae.es/")
+}
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
 
 </body>
-</html>
+</html> 

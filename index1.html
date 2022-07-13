@@ -9,7 +9,133 @@
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
+  html, body, h1, h2, h3, h4, h5 {
+    font-family: "Open Sans", sans-serif; 
+  }
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+body {
+  margin: 0;
+  min-width: 250px;
+}
+
+/* Include the padding and border in an element's total width and height */
+* {
+  box-sizing: border-box;
+}
+
+/* Remove margins and padding from the list */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Style the header */
+.header {
+  background-color:#dddd;
+  padding: 30px 40px;
+  color:black;
+  text-align: center;
+}
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
 </style>
 </head>
 <body class="w3-theme-l5">
@@ -18,20 +144,12 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Logo</a>
-  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
-  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
-  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
-  <div class="w3-dropdown-hover w3-hide-small">
-    <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>     
-    <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
-      <a href="#" class="w3-bar-item w3-button">One new friend request</a>
-      <a href="#" class="w3-bar-item w3-button">John Doe posted on your wall</a>
-      <a href="#" class="w3-bar-item w3-button">Jane likes your post</a>
-    </div>
-  </div>
-  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
-    <img src="https://us.123rf.com/450wm/liravega258/liravega2581901/liravega258190100016/122214182-estudio-de-dise%C3%B1o-dise%C3%B1o-dibujo-fotograf%C3%ADa-dise%C3%B1o-gr%C3%A1fico-educaci%C3%B3n-creatividad-arte-ideas-ilustraci.jpg" class="w3-circle" style="height:23px;width:23px" alt="Avatar">
+  <a href="./index1.html" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Inicio</a>
+  <a href="./clase.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News">Clase</a>
+  <a href="./casa.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings">Casa</a>
+  <a href="./Extraescolares.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages">Extraescolares</a>
+   <a href="./mespacio.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages">Mi espacio</a>
+
   </a>
  </div>
 </div>
@@ -52,8 +170,8 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
     <div class="w3-col m3">
       <!-- Profile -->
       <div class="w3-card w3-round w3-white">
-        <div class="w3-container">
-         <h4 class="w3-center">My Profile</h4>
+        <div class="w3-container w3-white">
+         <h4 class="w3-center ">PERFIL</h4>
          <p class="w3-center"><img src="https://us.123rf.com/450wm/liravega258/liravega2581901/liravega258190100016/122214182-estudio-de-dise%C3%B1o-dise%C3%B1o-dibujo-fotograf%C3%ADa-dise%C3%B1o-gr%C3%A1fico-educaci%C3%B3n-creatividad-arte-ideas-ilustraci.jpg" class="w3-circle" style="height:200px;width:200px" alt="Avatar"></p>
          <hr>
          <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Elena León</p>
@@ -66,36 +184,18 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
       <!-- Accordion -->
       <div class="w3-card w3-round">
         <div class="w3-white">
-          <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> My Groups</button>
+          <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> INICIO DE CURSO</button>
           <div id="Demo1" class="w3-hide w3-container">
-            <p>Some text..</p>
+            <p id="demo"></p>
           </div>
-          <button onclick="myFunction('Demo2')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> My Events</button>
-          <div id="Demo2" class="w3-hide w3-container">
-            <p>Some other text..</p>
-          </div>
-          <button onclick="myFunction('Demo3')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-users fa-fw w3-margin-right"></i> My Photos</button>
+          <button onclick="myFunction('Demo3')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-users fa-fw w3-margin-right"></i> CALENDARIO ESCOLAR</button>
           <div id="Demo3" class="w3-hide w3-container">
          <div class="w3-row-padding">
          <br>
            <div class="w3-half">
-             <img src="/w3images/lights.jpg" style="width:100%" class="w3-margin-bottom">
+             <img src="https://doc.csit.es/api/image/stream/7941_2022_23_Calendario_escolar" style="width:300px" class="w3-margin-bottom">
            </div>
-           <div class="w3-half">
-             <img src="/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
-           </div>
-           <div class="w3-half">
-             <img src="/w3images/mountains.jpg" style="width:100%" class="w3-margin-bottom">
-           </div>
-           <div class="w3-half">
-             <img src="/w3images/forest.jpg" style="width:100%" class="w3-margin-bottom">
-           </div>
-           <div class="w3-half">
-             <img src="/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
-           </div>
-           <div class="w3-half">
-             <img src="/w3images/snow.jpg" style="width:100%" class="w3-margin-bottom">
-           </div>
+          
          </div>
           </div>
         </div>      
@@ -105,20 +205,173 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
       <!-- Interests --> 
       <div class="w3-card w3-round w3-white w3-hide-small">
         <div class="w3-container">
-          <p>Interests</p>
-          <p>
-            <span class="w3-tag w3-small w3-theme-d5">News</span>
-            <span class="w3-tag w3-small w3-theme-d4">W3Schools</span>
-            <span class="w3-tag w3-small w3-theme-d3">Labels</span>
-            <span class="w3-tag w3-small w3-theme-d2">Games</span>
-            <span class="w3-tag w3-small w3-theme-d1">Friends</span>
-            <span class="w3-tag w3-small w3-theme">Games</span>
-            <span class="w3-tag w3-small w3-theme-l1">Friends</span>
-            <span class="w3-tag w3-small w3-theme-l2">Food</span>
-            <span class="w3-tag w3-small w3-theme-l3">Design</span>
-            <span class="w3-tag w3-small w3-theme-l4">Art</span>
-            <span class="w3-tag w3-small w3-theme-l5">Photos</span>
-          </p>
+          <p>HORARIO</p>
+        <table style="width: 100%;">
+<colgroup>
+  <col span="1" style="background-color: #dddd">
+  <col span="6" style="background-color:white">
+</colgroup>
+<tr>
+<th>HORA</th>
+<th>L</th>
+<th>M</th>
+<th>X</th>
+<th>J</th>
+<th>V</th>
+</tr>
+<tr>
+<td>8:30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>9.15</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+
+</tr>
+<tr>
+<td>10.00</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+
+</tr>
+<tr>
+<td>10.45</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+
+</tr>
+<tr>
+<td>11.15</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+
+</tr>
+<tr>
+<td>12.00</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+
+</tr>
+<tr>
+<td>12.45</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+
+</tr>
+</table>
+<br>
+<table style="width: 100%;">
+<colgroup>
+  <col span="1" style="background-color: #dddd">
+  <col span="2" style="background-color:white">
+  <col span="1" style="background-color:grey">
+   <col span="1" style="background-color:white">
+    <col span="1" style="background-color:grey">
+</colgroup>
+<tr>
+<th>HORA</th>
+<th>L</th>
+<th>M</th>
+<th>X</th>
+<th>J</th>
+<th>V</th>
+</tr>
+<tr>
+<td>8:30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>9.30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+
+</tr>
+<tr>
+<td>10.25</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+
+</tr>
+<tr>
+<td>10.50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+
+</tr>
+<tr>
+<td>11.50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+
+</tr>
+<tr>
+<td>12.50</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+
+</tr>
+<tr>
+<td>15.00<br><b>13.05<b></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+
+</tr>
+<tr>
+<td>16.00<br><b>14.05<b></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+
+</tr>
+
+</table>
         </div>
       </div>
       <br>
@@ -129,7 +382,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
           <i class="fa fa-remove"></i>
         </span>
         <p><strong>Hey!</strong></p>
-        <p>People are looking at your profile. Find out who.</p>
+        <p>Estas utilizando una página web creada por Elena León, disfrútala mucho</p>
       </div>
     
     <!-- End Left Column -->
@@ -141,54 +394,65 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
       <div class="w3-row-padding">
         <div class="w3-col m12">
           <div class="w3-card w3-round w3-white">
-            <div class="w3-container w3-padding">
-              <h6 class="w3-opacity">Social Media template by w3.css</h6>
-              <p contenteditable="true" class="w3-border w3-padding">Status: Feeling Blue</p>
-              <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  Post</button> 
+                <div class="w3-container w3-padding">
+                  <h2>NOTAS IMPORTANTES</h2>
+              <textarea id="w3review" name="w3review" rows="4" cols="50">Escribe aquí...</textarea>
             </div>
           </div>
         </div>
       </div>
       
       <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-        <img src="/w3images/avatar2.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
-        <span class="w3-right w3-opacity">1 min</span>
-        <h4>John Doe</h4><br>
+        <img src="https://img.freepik.com/vector-premium/personaje-plano-dibujos-animados-vector-pasando-encuesta-linea-prueba-examen-comprobacion-resultados-dispositivos-telefono-movil-pantalla-monitores-concepto-educacion-examen-linea-distancia_189557-1585.jpg" alt="Avatar" class="w3-left w3-margin-right w3-circle" style="width:100px">
         <hr class="w3-clear">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <div class="w3-row-padding" style="margin:0 -16px">
-            <div class="w3-half">
-              <img src="/w3images/lights.jpg" style="width:100%" alt="Northern Lights" class="w3-margin-bottom">
-            </div>
-            <div class="w3-half">
-              <img src="/w3images/nature.jpg" style="width:100%" alt="Nature" class="w3-margin-bottom">
-          </div>
-        </div>
-        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
-        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
-      </div>
-      
-      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-        <img src="/w3images/avatar5.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
-        <span class="w3-right w3-opacity">16 min</span>
-        <h4>Jane Doe</h4><br>
-        <hr class="w3-clear">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
-        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
-      </div>  
+        <div id="myDIV" class="header">
+  <h2 style="margin:5px">TAREAS PENDIENTES</h2>
+  <input type="text" id="myInput" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
 
+<ul id="myUL">
+  <li>Añade tus tareas aquí</li>
+</ul>
+</div>
+      
       <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-        <img src="/w3images/avatar6.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
-        <span class="w3-right w3-opacity">32 min</span>
-        <h4>Angie Jane</h4><br>
+        <img src="https://img.freepik.com/vector-premium/examen-educacion-universitaria-o-resultados-prueba-cuestionario-escolar-mano-ilustracion-persona-alumno-alumno-dibujos-animados-plana_101884-930.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:100px">
+        <h2 align="center">EXÁMENES</h2><br>
         <hr class="w3-clear">
-        <p>Have you seen this?</p>
-        <img src="/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
-        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
-      </div> 
+        <table style="width: 700px" align="center">
+<colgroup>
+  <col span="5" style="background-color: white">
+    <col span="1" style="background-color:#dddd">
+</colgroup>
+<tr >
+<th style="width:200px">LUNES</th>
+<th style="width:200px">MARTES</th>
+<th style="width:200px">MIÉRCOLES</th>
+<th style="width:200px">JUEVES</th>
+<th style="width:200px">VIERNES</th>
+<th>FECHA</th>
+</tr>
+<tr style="width: 800px; height:200px" contenteditable="true">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td align=center>ESTA SEMANA</td>
+</tr>
+<tr style="width: 800px; height:200px" contenteditable="true">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td align=center >SIGUIENTE SEMANA</td>
+</tr>
+
+</tr>
+</table>
+</div>
       
     <!-- End Middle Column -->
     </div>
@@ -197,39 +461,44 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
     <div class="w3-col m2">
       <div class="w3-card w3-round w3-white w3-center">
         <div class="w3-container">
-          <p>Upcoming Events:</p>
-          <img src="/w3images/forest.jpg" alt="Forest" style="width:100%;">
-          <p><strong>Holiday</strong></p>
-          <p>Friday 15:00</p>
-          <p><button class="w3-button w3-block w3-theme-l4">Info</button></p>
+          <p>Bachillerato Dual</p>
+          <img src="https://lesalzines.institucio.org/bundles/frontend/uploads/5/articles/10247/diploma-dual-h.jpg?v8" alt="Forest" style="width:100%;">
+          <p><strong>Estados Unidos</strong></p>
+          <p><button class="w3-button w3-block w3-theme-l4"onclick="dual()">Entrar</button></p>
         </div>
       </div>
       <br>
       
       <div class="w3-card w3-round w3-white w3-center">
         <div class="w3-container">
-          <p>Friend Request</p>
-          <img src="/w3images/avatar6.png" alt="Avatar" style="width:50%"><br>
-          <span>Jane Doe</span>
-          <div class="w3-row w3-opacity">
-            <div class="w3-half">
-              <button class="w3-button w3-block w3-green w3-section" title="Accept"><i class="fa fa-check"></i></button>
-            </div>
-            <div class="w3-half">
-              <button class="w3-button w3-block w3-red w3-section" title="Decline"><i class="fa fa-remove"></i></button>
-            </div>
-          </div>
+          <p>BUSCA EN WIKIPEDIA</p>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Wikipedia-logo-v2-es.svg/1200px-Wikipedia-logo-v2-es.svg.png" alt="Avatar" style="width:50%"><br>
+    
+     <label align="center">
+      ¿QUÉ QUIERES BUSCAR?
+     </label>
+     <br>
+     <br>
+   <input align="center" type="search" id="buscar"><br><br>
+   <button align="center" onclick="buscador()">BUSCAR</button>
+   <br>
         </div>
       </div>
       <br>
       
-      <div class="w3-card w3-round w3-white w3-padding-16 w3-center">
-        <p>ADS</p>
+      <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+          <p>Microsoft Teams</p>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg/1200px-Microsoft_Office_Teams_%282018%E2%80%93present%29.svg.png" alt="Forest" style="width:100%;">
+          <p>Correo:<br><b>27054F@fecsjv.edufec.com</b></p>
+          <p><button class="w3-button w3-block w3-theme-l4"onclick="teams()">Entrar</button></p>
+        </div>
       </div>
       <br>
+
       
       <div class="w3-card w3-round w3-white w3-padding-32 w3-center">
-        <p><i class="fa fa-bug w3-xxlarge"></i></p>
+      <img src="https://m.media-amazon.com/images/M/MV5BMjE3MDUyNjM1N15BMl5BanBnXkFtZTcwMDc3NDY2Mg@@._V1_UY1200_CR124,0,630,1200_AL_.jpg" width="100px">
       </div>
       
     <!-- End Right Column -->
@@ -244,7 +513,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 
 <!-- Footer -->
 <footer class="w3-container w3-theme-d3 w3-padding-16">
-  <h5>Footer</h5>
+  <h5>Página web personal, creada gratuitamente por epuntoele13@gmail.com</h5>
 </footer>
 
 <footer class="w3-container w3-theme-d5">
@@ -272,6 +541,103 @@ function openNav() {
     x.className += " w3-show";
   } else { 
     x.className = x.className.replace(" w3-show", "");
+  }
+}
+// Set the date we're counting down to
+var countDownDate = new Date("Sep 8, 2022 08:30:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+
+function buscador() {
+  var buscar = document.getElementById('buscar').value;
+  var buscarfull = "https://es.wikipedia.org/wiki/".concat("",buscar);
+  window.open(buscarfull)
+}
+function dual() {
+  window.open("https://www.colegia.org/dashboard")
+}
+function teams() {
+  window.open("https://teams.microsoft.com/_?culture=es-es&country=ES&lm=deeplink&lmsrc=homePageWeb&cmpid=WebSignIn#/school/teams-grid/General?ctx=teamsGrid")
+}
+
+// Create a "close" button and append it to each list item
+var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+
+// Click on a close button to hide the current list item
+var close = document.getElementsByClassName("close");
+var i;
+//const nota = document.getElementsById("")
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+
+// Add a "checked" symbol when clicking on a list item
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+
+// Create a new list item when clicking on the "Add" button
+function newElement() {
+  var li = document.createElement("li");
+  const inputValue = document.getElementById("myInput").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("myInput").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
   }
 }
 </script>

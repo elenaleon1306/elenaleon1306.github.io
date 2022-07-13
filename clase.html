@@ -1,442 +1,248 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>CURSO ESCOLAR</title>
-	<link rel="stylesheet" type="text/css" href="./inicio.css">
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">	
-	
-
-
-	<script type="text/javascript" src="./clase.js"></script>
+<title>CLASE</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="./clases.js"></script>
 <style>
-table, th, td,tr {
-  border: 2px solid black;
-  border-collapse: collapse;
+html, body, h1, h2, h3, h4, h5 {
+  font-family: "Open Sans", sans-serif
+}
 
-[contenteditable] {
-  outline: 0px solid transparent;
-}
-body {
-  margin: 0;
-  min-width: 250px;
-}
 </style>
-<style>
-body {
-  margin: 0;
-  min-width: 250px;
-}
-
-/* Include the padding and border in an element's total width and height */
-* {
-  box-sizing: border-box;
-}
-
-/* Remove margins and padding from the list */
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-/* Style the list items */
-ul li {
-  cursor: pointer;
-  position: relative;
-  padding: 12px 8px 12px 40px;
-  list-style-type: none;
-  background: #dddd;
-  font-size: 18px;
-  transition: 0.2s;
-  
-  /* make the list items unselectable */
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* Set all odd list items to a different color (zebra-stripes) */
-ul li:nth-child(odd) {
-  background:#eee;
-}
-
-/* Darker background-color on hover */
-ul li:hover {
-  background: white;
-}
-
-/* When clicked on, add a background color and strike out text */
-ul li.checked {
-  background:grey;
-  color: whhite;
-  text-decoration: line-through;
-}
-
-/* Add a "checked" mark when clicked on */
-ul li.checked::before {
-  content: '';
-  position: absolute;
-  border-color: #fff;
-  border-style: solid;
-  border-width: 0 2px 2px 0;
-  top: 10px;
-  left: 16px;
-  transform: rotate(45deg);
-  height: 15px;
-  width: 7px;
-}
-
-/* Style the close button */
-.close {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 12px 16px 12px 16px;
-}
-
-.close:hover {
-  background-color: #f44336;
-  color: white;
-}
-
-/* Style the header */
-.header {
-  background-color:grey;
-  padding: 30px 40px;
-  color: white;
-  text-align: center;
-}
-
-/* Clear floats after the header */
-.header:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Style the input */
-input {
-  margin: 0;
-  border: none;
-  border-radius: 0;
-  width: 75%;
-  padding: 10px;
-  float: left;
-  font-size: 16px;
-}
-
-/* Style the "Add" button */
-.addBtn {
-  padding: 10px;
-  width: 25%;
-  background: #d9d9d9;
-  color: #555;
-  float: left;
-  text-align: center;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-  border-radius: 0;
-}
-
-.addBtn:hover {
-  background-color: #bbb;
-}
-</style>
-</style>
-
 </head>
-<body>
-  <div class="w3-top">
-	<div class="w3-bar w3-border w3-grey">
-		  <a href="./index.html" class="w3-bar-item w3-button">Inicio</a>
-		  <a href="./clase.html" class="w3-bar-item w3-button ">Clase</a>
-		  <a href="./casa.html" class="w3-bar-item w3-button ">Casa</a>
-		  <a href="./Extraescolares.html" class="w3-bar-item w3-button ">Extraescolares</a>
-      <a href="./modoverano.html" class="w3-bar-item w3-button ">Modo Verano</a>
-      <a href="./mespacio.html" class="w3-bar-item w3-button ">Mi espacio</a>
-	</div>
+<body class="w3-theme-l5">
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="./index1.html" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Inicio</a>
+  <a href="./clase.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News">Clase</a>
+  <a href="./casa.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings">Casa</a>
+  <a href="./Extraescolares.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages">Extraescolares</a>
+   <a href="./mespacio.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages">Mi espacio</a>
+
+  </a>
+ </div>
 </div>
-<div align="center" class="w3-panel w3-padding-16 w3-light-grey">
-    <h2>CLASE</h2>
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
+  <!-- The Grid -->
+  <div class="w3-row">
+    <!-- Left Column -->
+    <div class="w3-col m3">
+      <!-- Profile -->
+      <div class="w3-card w3-round w3-white">
+        <div class="w3-container">
+         <h4 class="w3-center">PERFIL</h4>
+         <p class="w3-center"><img src="https://us.123rf.com/450wm/liravega258/liravega2581901/liravega258190100016/122214182-estudio-de-dise%C3%B1o-dise%C3%B1o-dibujo-fotograf%C3%ADa-dise%C3%B1o-gr%C3%A1fico-educaci%C3%B3n-creatividad-arte-ideas-ilustraci.jpg" class="w3-circle" style="height:200px;width:200px" alt="Avatar"></p>
+         <hr>
+         <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Elena León</p>
+         <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> Madrid, Spain</p>
+         <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> 13 junio, 2007</p>
+        </div>
+      </div>
+      <br>
+    
+      <!-- Alert Box -->
+      <div class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
+        <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l3 w3-display-topright">
+          <i class="fa fa-remove"></i>
+        </span>
+        <p><strong>Hey!</strong></p>
+        <p>Aquí va un video que te puede interesar</p>
+        <iframe width="300" height="200" src="https://www.youtube.com/embed/9-_1sJN-JvY" title="Rap de Riccardo Di Rigo (Inazuma eleven go) | El Virtuoso | Nozi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    
+    <!-- End Left Column -->
+    </div>
+    
+    <!-- Middle Column -->
+    <div class="w3-col m7">
+      
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <img src="https://img.freepik.com/vector-gratis/chico-milenario-estresado-que-estudia-antes-examenes-universitarios-estudiante-angustiado-que-cumple-fecha-limite-haciendo-tarea-preparandose-prueba-casa-libros-ilustracion-plana_74855-20731.jpg?w=2000" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:100px">
+        <div align="center" class="w3-panel w3-padding-16 w3-light-grey">
+    <h2>ASIGNATURAS</h2>
+      <p>Indice de las asignaturas</p>
    </div>
 
-   <div class="container mt-5">
-  <div class="row">
-    <div class="col-sm-4">
-   <div align="center" class="w3-panel w3-padding-16 w3-light-grey">
-    <h2>HORARIO</h2>
-   </div>
-   <div align="center" class="w3-panel w3-padding-16 w3-light-grey">
-    <h4>junio y septimbre</h4>
-   </div>
-   <div align="center">
-   <table style="width: 1000px;">
-<colgroup>
-  <col span="1" style="background-color:#dddd">
-  <col span="6" style="background-color:white">
-</colgroup>
-<tr>
-<th>HORA</th>
-<th>LUNES</th>
-<th>MARTES</th>
-<th>MIÉRCOLES</th>
-<th>JUEVES</th>
-<th>VIERNES</th>
-</tr>
-<tr>
-<td>8.30</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>9.15</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>10.00</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>10.45</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>11.15</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>12.00</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>12.45</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</table>
-</div>
-<div align="center" class="w3-panel w3-padding-16 w3-light-grey">
-    <h4>octubre-mayo</h4>
-   </div>
-<div align="center">
-   <table style="width: 1000px;">
-<colgroup>
-  <col span="1" style="background-color:#dddd">
-  <col span="2" style="background-color:white">
-  <col span="1" style="background-color:grey">
-  <col span="1" style="background-color:white">
-  <col span="1" style="background-color:grey">
-</colgroup>
-<tr>
-<th>HORA</th>
-<th>LUNES</th>
-<th>MARTES</th>
-<th>MIÉRCOLES</th>
-<th>JUEVES</th>
-<th>VIERNES</th>
-</tr>
-<tr>
-<td>8.30</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>9.30</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>10.25</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>10.50</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>11.50</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>12.50</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>15:00 <br><b> 13:05</b></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>16:00 <br> <b>14:05</b></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</table>
+
+<div class="w3-row-padding w3-margin-top">
+  <div class="w3-third">
+    <div class="w3-card">
+
+       <input type="image" src="https://www.lifeder.com/wp-content/uploads/2022/03/lenguaje-literario.jpg" onclick="lengua()" width="223" height="200"> 
+
+      <div class="w3-container">
+        <h5 align="center">LENGUA</h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-third">
+    <div class="w3-card">
+       <input type="image" src="https://i.pinimg.com/736x/5e/c5/b8/5ec5b89574f327b8970e16a9b78f7087.jpg" onclick="matematicas()" width="223" height="200">
+      <div class="w3-container">
+        <h5 align="center">MATEMÁTICAS</h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-third">
+    <div class="w3-card">
+       <input type="image" src="https://www.magisnet.com/wp-content/uploads/2020/11/ingle%CC%81s.jpg" onclick="ingles()" width="223" height="200"> 
+      <div class="w3-container">
+        <h5 align="center">INGLÉS</h5>
+      </div>
+    </div>
+  </div>
 </div>
 
 
+<div>
+<div class="w3-row-padding w3-margin-top">
+  <div class="w3-third">
+    <div class="w3-card">
+       <input type="image" src="https://www3.gobiernodecanarias.org/medusa/edublog/iessaulotoron/wp-content/uploads/sites/338/2018/10/fyq.jpg" onclick="fyq()" width="223" height="200"> 
+      <div class="w3-container">
+        <h5 align="center">FÍSICA Y QUÍMICA</h5>
+      </div>
+    </div>
+  </div>
 
-<div align="center" class="w3-panel w3-padding-16 w3-light-grey">
-    <h2>TRABAJOS PENDIENTES</h2>
-   </div>
-<div id="myDIV" class="header">
-  <h2 style="margin:5px">My To Do List</h2>
-  <input type="text" id="myInput" placeholder="Title...">
-  <span onclick="newElement()" class="addBtn">Add</span>
+  <div class="w3-third">
+    <div class="w3-card">
+       <input type="image" src="https://static.vecteezy.com/system/resources/thumbnails/001/218/609/small/collection-of-biology-icons.jpg" onclick="byg()" width="223" height="200"> 
+      <div class="w3-container">
+        <h6 align="center">BIOLOGÍA Y GEOLOGÍA</h6>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-third">
+    <div class="w3-card">
+       <input type="image"   src="https://www.educaciongratuita.es/imagenes/contenido/educacion-secundaria-obligatoria/asignaturas/geografia-e-historia/contenidos-geografia-e-historia-1-eso.jpg" onclick="gyh()" width="223" height="200"> 
+      <div class="w3-container">
+        <h6 align="center">GEOGRAFÍA E HISTORIA</h6>
+      </div>
+    </div>
+  </div>
 </div>
 
-<ul id="myUL">
-  <li>ESCRIBE...</li>
-</ul>
+<div>
+<div class="w3-row-padding w3-margin-top">
+  <div class="w3-third">
+    <div class="w3-card">
+       <input type="image" src="https://e00-marca.uecdn.es/assets/multimedia/imagenes/2021/12/31/16409659213820.jpg" onclick="educacionfisica()" width="223" height="200"> 
+      <div class="w3-container">
+        <h5 align="center">EDUCACIÓN FÍSICA</h5>
+      </div>
+    </div>
+  </div>
 
-<div align="center" class="w3-panel w3-padding-16 w3-light-grey">
-    <h2>EXÁMENES</h2>
-   </div>
-   <div align="center">
-<table style="width:1000px"  >
-  <colgroup>
-    <col span="5" style="background-color: white">
-    <col span="1" style="background-color: grey">
-    <col span="1" style="background-color: #5A5A5A">
-  </colgroup>
-<tr>
-<th style= width:200px>LUNES</th>
-<th style= width:200px>MARTES</th>
-<th style= width:200px>MIÉRCOLES</th>
-<th style= width:200px>JUEVES</th>
-<th style= width:200px>VIERNES</th>
-<th style= width:200px>FECHA</th>
-</tr>
-<tr style= "width:650px; height: 200px" contenteditable="true">
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th>ESTA SEMANA</th>
-</tr>
-<tr style= "width:650px; height: 200px" contenteditable="true">
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th>SIGUIENTE SEMANA</th>
-</tr>
-</tr>
-</table>
+  <div class="w3-third">
+    <div class="w3-card">
+       <input type="image" src="https://www.unesco.org/sites/default/files/styles/paragraph_medium_desktop/public/voces-educacion-artistica-1600-800.png?itok=F0CH6Um9" onclick="arts()" width="223" height="200"> 
+      <div class="w3-container">
+        <h5 align="center">EDUCACIÓN PLÁSTICA</h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-third">
+    <div class="w3-card">
+       <input type="image" src="https://concepto.de/wp-content/uploads/2013/08/dibujo-tecnico-e1551901451830.jpg" onclick="dibujotecnico()" width="223" height="200"> 
+      <div class="w3-container">
+        <h5 align="center">DIBUJO TÉCNICO</h5>
+      </div>
+    </div>
+  </div>
 </div>
-<script>
-// Create a "close" button and append it to each list item
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
 
-// Click on a close button to hide the current list item
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
+<div>
+<div class="w3-row-padding w3-margin-top">
+  <div class="w3-third">
+    <div class="w3-card">
+       <input type="image" src="https://www.magisnet.com/wp-content/uploads/2020/11/Religion-01.jpg" onclick="religion()" width="223" height="200"> 
+      <div class="w3-container">
+        <h5 align="center">RELIGIÓN</h5>
+      </div>
+    </div>
+  </div>
+      </div> 
+    </div>
+  </div>
+</div>
+</div>
+      
+    <!-- End Middle Column -->
+    </div>
+    
+    <!-- Right Column -->
+    <div class="w3-col m2">
+      <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+          <p>Upcoming Events:</p>
+          <img src="/w3images/forest.jpg" alt="Forest" style="width:100%;">
+          <p><strong>Holiday</strong></p>
+          <p>Friday 15:00</p>
+          <p><button class="w3-button w3-block w3-theme-l4">Info</button></p>
+        </div>
+      </div>
+      <br>
+      
+      <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+          <p>Friend Request</p>
+          <img src="/w3images/avatar6.png" alt="Avatar" style="width:50%"><br>
+          <span>Jane Doe</span>
+          <div class="w3-row w3-opacity">
+            <div class="w3-half">
+              <button class="w3-button w3-block w3-green w3-section" title="Accept"><i class="fa fa-check"></i></button>
+            </div>
+            <div class="w3-half">
+              <button class="w3-button w3-block w3-red w3-section" title="Decline"><i class="fa fa-remove"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      
+      <div class="w3-card w3-round w3-white w3-padding-16 w3-center">
+        <p>ADS</p>
+      </div>
+      <br>
+      
+      <div class="w3-card w3-round w3-white w3-padding-32 w3-center">
+        <p><i class="fa fa-bug w3-xxlarge"></i></p>
+      </div>
+      
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+<!-- End Page Container -->
+</div>
+<br>
 
-// Add a "checked" symbol when clicking on a list item
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
+<!-- Footer -->
+<footer class="w3-container w3-theme-d3 w3-padding-16">
+  <h5>Footer</h5>
+</footer>
 
-// Create a new list item when clicking on the "Add" button
-function newElement() {
-  var li = document.createElement("li");
-  var inputValue = document.getElementById("myInput").value;
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("You must write something!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("myInput").value = "";
+<footer class="w3-container w3-theme-d5">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
 
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
 
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }
-}
-</script>
 </body>
-</html>
+</html> 
