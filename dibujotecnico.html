@@ -1,15 +1,358 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>CURSO ESCOLAR</title>
-	<link rel="stylesheet" type="text/css" href="./inicio.css">
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">	
-	<script type="text/javascript" src="./inicio.js"></script>
+<title>DIBUJO TÉCNICO</title>
+<link href="https://images.emojiterra.com/google/noto-emoji/v2.034/512px/1f4da.png" rel="icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif
+}
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
 </head>
-<body>
-	<div align="center" class="w3-panel w3-padding-16 w3-light-grey">
-    <h2>DIBUJO TÉCNICO</h2>
-   </div>
+<body class="w3-theme-l5">
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="./index1.html" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Inicio</a>
+  <a href="./clase.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News">Clase</a>
+  <a href="./Extraescolares.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages">Extraescolares</a>
+   <a href="./mespacio.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages">Mi espacio</a>
+
+  </a>
+ </div>
+</div>
+
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
+  <!-- The Grid -->
+  <div class="w3-row">
+    <!-- Left Column -->
+    <div class="w3-col m3">
+      <!-- Profile -->
+      <div class="w3-card w3-round w3-white">
+        <div class="w3-container">
+         <h4 class="w3-center">PERFIL</h4>
+         <p class="w3-center"><img src="https://us.123rf.com/450wm/liravega258/liravega2581901/liravega258190100016/122214182-estudio-de-dise%C3%B1o-dise%C3%B1o-dibujo-fotograf%C3%ADa-dise%C3%B1o-gr%C3%A1fico-educaci%C3%B3n-creatividad-arte-ideas-ilustraci.jpg" class="w3-circle" style="height:200px;width:200px" alt="Avatar"></p>
+         <hr>
+         <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Elena León</p>
+         <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> Madrid, Spain</p>
+         <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> 13 junio, 2007</p>
+        </div>
+      </div>
+      <br>
+
+      <!-- Accordion -->
+      <div class="w3-card w3-round">
+        <div class="w3-white">
+          <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i>DATOS</button>
+          <div id="Demo1" class="w3-hide w3-container">
+            <p>Número de unidades:__<br>
+               Días que tenemos clase:___
+            </p>
+          </div>
+
+          <button onclick="myFunction('Demo3')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-users fa-fw w3-margin-right"></i> Vídeos de dibujo técnico</button>
+          <div id="Demo3" class="w3-hide w3-container">
+            <p><button class="w3-button w3-block w3-theme-l4" onclick="vtecnico()">VER</button></p>
+         <div class="w3-row-padding">
+         <br>
+
+         </div>
+          </div>
+        </div>      
+      </div>
+      <br>
+      <!-- Alert Box -->
+      <div class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
+        <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l3 w3-display-topright">
+          <i class="fa fa-remove"></i>
+        </span>
+        <p><strong>Hey!</strong></p>
+        <p>Aquí va un video que te puede interesar</p>
+        <iframe width="250" height="200" src="https://www.youtube.com/embed/NiAaUsfbWks?list=RDCMUCb40x1kRqrq7---i14VaA-A" title="ÁREAS Y VOLÚMENES DE CUERPOS GEOMÉTRICOS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       </div>
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Middle Column -->
+    <div class="w3-col m7"> 
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <h2 align="center">ESQUEMAS DE DIBUJO TÉCNICO<h2>
+       <h4 align="center"> ESCOGE EL ESQUEMA QUE QUIERAS</h4><br>
+        <hr class="w3-clear">
+        <div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="https://thumbs.dreamstime.com/z/dibujo-t%C3%A9cnico-del-icono-de-la-casa-en-estilo-del-esquema-aislado-en-el-fondo-blanco-arquitecto-symbol-85613944.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Euro_Construction.svg/1200px-Euro_Construction.svg.png" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="https://image.slidesharecdn.com/mapaconceptualdibujotcnicomarcos-120214095947-phpapp02/95/mapa-conceptual-dibujo-tcnico-marcos-1-728.jpg?cb=1329214020" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="https://1.bp.blogspot.com/-p010bdPv-N8/WDtLr63XeYI/AAAAAAADcTM/Kjq0oCCb3qI4cH47VFcWm-CKC5OyRVMZQCLcB/s1600/mapa%2Bconcept%2Bproceso%2Bresoluci%25C3%25B3n%2Bproblemas%2Bt%25C3%25A9cnicos.JPG" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="https://www.edu.xunta.gal/espazoAbalar/sites/espazoAbalar/files/datos/1464946300/contido/diagrama_esbozo_croquis_plano.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="https://i0.wp.com/wikisabio.com/wp-content/uploads/2017/05/casas-dibujo-tecnico21.jpg?fit=600%2C352&ssl=1&resize=1280%2C720" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="https://thumbs.dreamstime.com/z/dibujo-t%C3%A9cnico-del-icono-de-la-casa-en-estilo-del-esquema-aislado-en-el-fondo-blanco-arquitecto-symbol-85613944.jpg" style="width:100%" onclick="currentSlide(1)" alt="esquema 1">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Euro_Construction.svg/1200px-Euro_Construction.svg.png" style="width:100%" onclick="currentSlide(2)"alt="esquema 2">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://image.slidesharecdn.com/mapaconceptualdibujotcnicomarcos-120214095947-phpapp02/95/mapa-conceptual-dibujo-tcnico-marcos-1-728.jpg?cb=1329214020" style="width:100%" onclick="currentSlide(3)" alt="esquema 3">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://1.bp.blogspot.com/-p010bdPv-N8/WDtLr63XeYI/AAAAAAADcTM/Kjq0oCCb3qI4cH47VFcWm-CKC5OyRVMZQCLcB/s1600/mapa%2Bconcept%2Bproceso%2Bresoluci%25C3%25B3n%2Bproblemas%2Bt%25C3%25A9cnicos.JPG" style="width:100%" onclick="currentSlide(4)" alt="esquema 4">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://www.edu.xunta.gal/espazoAbalar/sites/espazoAbalar/files/datos/1464946300/contido/diagrama_esbozo_croquis_plano.jpg" style="width:100%" onclick="currentSlide(5)" alt="esquema 5">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="https://i0.wp.com/wikisabio.com/wp-content/uploads/2017/05/casas-dibujo-tecnico21.jpg?fit=600%2C352&ssl=1&resize=1280%2C720" style="width:100%" onclick="currentSlide(6)" alt="esquema 6">
+    </div>
+  </div>
+</div>
+      </div>
+
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <h4>LIBROS y APUNTES</h4><br>
+        <hr class="w3-clear">
+        <p>aquí voy a insertar un pdf del libro</p>
+      </div>  
+
+    <!-- End Middle Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-col m2">
+      <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+          <p>ENCICLOPEDIA DE DIBUJO TECNICO</p>
+          <img src="data:image/png;base64,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" alt="Forest" style="width:100%;">
+          <p><strong>Con todos los contenidos</strong></p>
+          <p>busca lo que necesites</p>
+          <p><button class="w3-button w3-block w3-theme-l4" onclick="apps()">ENTRAR</button></p>
+        </div>
+      </div>
+      <br>
+
+      <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+          <p>COSAS IMPORTANTES</p>
+          <textarea id="w3review" name="w3review" rows="4" cols="15">Escribe aquí...</textarea>
+          <div class="w3-row w3-opacity">
+          </div>
+        </div>
+      </div>
+      <br>     
+
+    <!-- End Right Column -->
+    </div>
+
+  <!-- End Grid -->
+  </div>
+
+<!-- End Page Container -->
+</div>
+<br>
+
+<!-- Footer -->
+<!-- Footer -->
+<footer class="w3-container w3-theme-d3 w3-padding-16">
+  <h5>Página web personal, creada gratuitamente por epuntoele13@gmail.com</h5>
+</footer>
+
+<footer class="w3-container w3-theme-d5">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+<script>
+// Accordion
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-theme-d1";
+  } else { 
+    x.className = x.className.replace("w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-theme-d1", "");
+  }
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+function vtecnico() {
+  window.open("https://www.youtube.com/watch?v=DmbXqqBYWg8")
+}
+function apps() {
+  window.open("https://dibujotecni.com/")
+}
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
 
 </body>
-</html>
+</html> 

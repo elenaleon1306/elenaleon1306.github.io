@@ -1,15 +1,358 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>CURSO ESCOLAR</title>
-	<link rel="stylesheet" type="text/css" href="./inicio.css">
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">	
-	<script type="text/javascript" src="./inicio.js"></script>
+<title>BIOLOGÍA Y GEOLOGÍA</title>
+<link href="https://images.emojiterra.com/google/noto-emoji/v2.034/512px/1f4da.png" rel="icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif
+}
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
 </head>
-<body>
-	<div align="center" class="w3-panel w3-padding-16 w3-light-grey">
-    <h2>BIOLOGÍA Y GEOLOGÍA</h2>
-   </div>
+<body class="w3-theme-l5">
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="./index1.html" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Inicio</a>
+  <a href="./clase.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News">Clase</a>
+  <a href="./Extraescolares.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages">Extraescolares</a>
+   <a href="./mespacio.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages">Mi espacio</a>
+
+  </a>
+ </div>
+</div>
+
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
+  <!-- The Grid -->
+  <div class="w3-row">
+    <!-- Left Column -->
+    <div class="w3-col m3">
+      <!-- Profile -->
+      <div class="w3-card w3-round w3-white">
+        <div class="w3-container">
+         <h4 class="w3-center">PERFIL</h4>
+         <p class="w3-center"><img src="https://us.123rf.com/450wm/liravega258/liravega2581901/liravega258190100016/122214182-estudio-de-dise%C3%B1o-dise%C3%B1o-dibujo-fotograf%C3%ADa-dise%C3%B1o-gr%C3%A1fico-educaci%C3%B3n-creatividad-arte-ideas-ilustraci.jpg" class="w3-circle" style="height:200px;width:200px" alt="Avatar"></p>
+         <hr>
+         <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Elena León</p>
+         <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> Madrid, Spain</p>
+         <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> 13 junio, 2007</p>
+        </div>
+      </div>
+      <br>
+
+      <!-- Accordion -->
+      <div class="w3-card w3-round">
+        <div class="w3-white">
+          <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i>DATOS</button>
+          <div id="Demo1" class="w3-hide w3-container">
+            <p>Número de unidades:__<br>
+               Días que tenemos clase:___
+            </p>
+          </div>
+
+          <button onclick="myFunction('Demo3')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-users fa-fw w3-margin-right"></i> Vídeos de biología y geología</button>
+          <div id="Demo3" class="w3-hide w3-container">
+            <p><button class="w3-button w3-block w3-theme-l4" onclick="vbyg()">VER</button></p>
+         <div class="w3-row-padding">
+         <br>
+
+         </div>
+          </div>
+        </div>      
+      </div>
+      <br>
+      <!-- Alert Box -->
+      <div class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
+        <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l3 w3-display-topright">
+          <i class="fa fa-remove"></i>
+        </span>
+        <p><strong>Hey!</strong></p>
+        <p>Aquí va un video que te puede interesar</p>
+        <iframe width="250" height="200" src="https://www.youtube.com/embed/tkjinWbH6FI" title="Erase una vez -  El Cuerpo Humano - La Digestion" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       </div>
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Middle Column -->
+    <div class="w3-col m7"> 
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <h2 align="center">ESQUEMAS DE BIOLOGÍA Y GEOLOGÍA<h2>
+       <h4 align="center"> ESCOGE EL ESQUEMA QUE QUIERAS</h4><br>
+        <hr class="w3-clear">
+        <div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="https://www.msdmanuals.com/-/media/manual/professional/images/e/n/d/end_pituitary_target_organs_es.gif?thn=0&sc_lang=es" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="https://cnnespanol.cnn.com/wp-content/uploads/2020/07/200714121605-hp-only-20200714-blood-groups-card-super-tease.png" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="https://slideplayer.es/slide/130230/2/images/11/Teor%C3%ADa+cromos%C3%B3mica+de+la+herencia.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="https://www.clasesalacarta.com/images/Esquemas/01-esq-materia-viva-bio-2-bach.png" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="https://es-static.z-dn.net/files/d48/53d406c9799688def0b9d81266910047.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="https://imgv2-2-f.scribdassets.com/img/document/476370710/original/03f490280d/1655423388?v=1" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="https://www.msdmanuals.com/-/media/manual/professional/images/e/n/d/end_pituitary_target_organs_es.gif?thn=0&sc_lang=es" style="width:100%" onclick="currentSlide(1)" alt="esquema 1">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://cnnespanol.cnn.com/wp-content/uploads/2020/07/200714121605-hp-only-20200714-blood-groups-card-super-tease.png" style="width:100%" onclick="currentSlide(2)"alt="esquema 2">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://slideplayer.es/slide/130230/2/images/11/Teor%C3%ADa+cromos%C3%B3mica+de+la+herencia.jpg" style="width:100%" onclick="currentSlide(3)" alt="esquema 3">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://www.clasesalacarta.com/images/Esquemas/01-esq-materia-viva-bio-2-bach.png" style="width:100%" onclick="currentSlide(4)" alt="esquema 4">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://es-static.z-dn.net/files/d48/53d406c9799688def0b9d81266910047.jpg" style="width:100%" onclick="currentSlide(5)" alt="esquema 5">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="https://imgv2-2-f.scribdassets.com/img/document/476370710/original/03f490280d/1655423388?v=1" style="width:100%" onclick="currentSlide(6)" alt="esquema 6">
+    </div>
+  </div>
+</div>
+      </div>
+
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <h4>LIBROS y APUNTES</h4><br>
+        <hr class="w3-clear">
+        <p>aquí voy a insertar un pdf del libro</p>
+      </div>  
+
+    <!-- End Middle Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-col m2">
+      <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+          <p>ENCICLOPEDIA DE BIOLOGÍA</p>
+          <img src="https://images-na.ssl-images-amazon.com/images/I/51tKxFhDrgL._SX367_BO1,204,203,200_.jpg" alt="Forest" style="width:100%;">
+          <p><strong>Con todos los contenidos</strong></p>
+          <p>busca lo que necesites</p>
+          <p><button class="w3-button w3-block w3-theme-l4" onclick="enci()">ENTRAR</button></p>
+        </div>
+      </div>
+      <br>
+
+      <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+          <p>COSAS IMPORTANTES</p>
+          <textarea id="w3review" name="w3review" rows="4" cols="15">Escribe aquí...</textarea>
+          <div class="w3-row w3-opacity">
+          </div>
+        </div>
+      </div>
+      <br>     
+
+    <!-- End Right Column -->
+    </div>
+
+  <!-- End Grid -->
+  </div>
+
+<!-- End Page Container -->
+</div>
+<br>
+
+<!-- Footer -->
+<!-- Footer -->
+<footer class="w3-container w3-theme-d3 w3-padding-16">
+  <h5>Página web personal, creada gratuitamente por epuntoele13@gmail.com</h5>
+</footer>
+
+<footer class="w3-container w3-theme-d5">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+<script>
+// Accordion
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-theme-d1";
+  } else { 
+    x.className = x.className.replace("w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-theme-d1", "");
+  }
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+function vbyg() {
+  window.open("https://www.youtube.com/watch?v=rbM7_mh_FKo&list=PLM3zaEIjzXIX0lfjtdMiflymrv2tzS1ph")
+}
+function enci() {
+  window.open("https://www.bioenciclopedia.com/")
+}
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
 
 </body>
-</html>
+</html> 

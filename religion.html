@@ -1,15 +1,357 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>CURSO ESCOLAR</title>
-	<link rel="stylesheet" type="text/css" href="./inicio.css">
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">	
-	<script type="text/javascript" src="./inicio.js"></script>
+<title>RELIGIÓN</title>
+<link href="https://images.emojiterra.com/google/noto-emoji/v2.034/512px/1f4da.png" rel="icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif
+}
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
 </head>
-<body>
-	<div align="center" class="w3-panel w3-padding-16 w3-light-grey">
-    <h2>RELIGIÓN</h2>
-   </div>
+<body class="w3-theme-l5">
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="./index1.html" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Inicio</a>
+  <a href="./clase.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News">Clase</a>
+  <a href="./Extraescolares.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages">Extraescolares</a>
+   <a href="./mespacio.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages">Mi espacio</a>
+
+  </a>
+ </div>
+</div>
+
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
+  <!-- The Grid -->
+  <div class="w3-row">
+    <!-- Left Column -->
+    <div class="w3-col m3">
+      <!-- Profile -->
+      <div class="w3-card w3-round w3-white">
+        <div class="w3-container">
+         <h4 class="w3-center">PERFIL</h4>
+         <p class="w3-center"><img src="https://us.123rf.com/450wm/liravega258/liravega2581901/liravega258190100016/122214182-estudio-de-dise%C3%B1o-dise%C3%B1o-dibujo-fotograf%C3%ADa-dise%C3%B1o-gr%C3%A1fico-educaci%C3%B3n-creatividad-arte-ideas-ilustraci.jpg" class="w3-circle" style="height:200px;width:200px" alt="Avatar"></p>
+         <hr>
+         <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Elena León</p>
+         <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> Madrid, Spain</p>
+         <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> 13 junio, 2007</p>
+        </div>
+      </div>
+      <br>
+
+      <!-- Accordion -->
+      <div class="w3-card w3-round">
+        <div class="w3-white">
+          <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i>DATOS</button>
+          <div id="Demo1" class="w3-hide w3-container">
+            <p>Número de unidades:__<br>
+               Días que tenemos clase:___
+            </p>
+          </div>
+
+          <button onclick="myFunction('Demo3')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-users fa-fw w3-margin-right"></i> Vídeos de religión</button>
+          <div id="Demo3" class="w3-hide w3-container">
+            <p><button class="w3-button w3-block w3-theme-l4" onclick="vreli()">VER</button></p>
+         <div class="w3-row-padding">
+         <br>
+
+         </div>
+          </div>
+        </div>      
+      </div>
+      <br>
+      <!-- Alert Box -->
+      <div class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
+        <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l3 w3-display-topright">
+          <i class="fa fa-remove"></i>
+        </span>
+        <p><strong>Hey!</strong></p>
+        <p>Aquí va un video que te puede interesar</p>
+       <iframe width="250" height="200" src="https://www.youtube.com/embed/x-isBokS5JY" title="Películas Infantiles | La Historia De La Semana Santa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       </div>
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Middle Column -->
+    <div class="w3-col m7"> 
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <h2 align="center">ESQUEMAS DE RELIGIÓN<h2>
+       <h4 align="center"> ESCOGE EL ESQUEMA QUE QUIERAS</h4><br>
+        <hr class="w3-clear">
+        <div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="https://www3.gobiernodecanarias.org/medusa/ecoblog/jmhergare/files/2013/10/Origen-religiones-monote%C3%ADstas.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="https://static.docsity.com/documents_first_pages/2021/10/30/f386c85af37e7e2c083f3e0c592acc4c.png" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="https://blogsaverroes.juntadeandalucia.es/iesvirgendelmar/files/2020/05/esquema-tema-7-1%C2%BA.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="https://img.over-blog-kiwi.com/1/20/80/33/20171102/ob_c4cb19_3-religiones-islam-esquema.jpgg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="https://t1.up.ltmcdn.com/es/posts/7/9/1/caracteristicas_del_cristianismo_medieval_5197_4_600.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="http://3.bp.blogspot.com/_hCrQ7ozF4JY/TSdPTU6IvXI/AAAAAAAAAAg/O-TdUrUYMEU/s1600/Feuerbach.jpg" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="https://www3.gobiernodecanarias.org/medusa/ecoblog/jmhergare/files/2013/10/Origen-religiones-monote%C3%ADstas.jpg" style="width:100%" onclick="currentSlide(1)" alt="esquema 1">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://static.docsity.com/documents_first_pages/2021/10/30/f386c85af37e7e2c083f3e0c592acc4c.png" style="width:100%" onclick="currentSlide(2)"alt="esquema 2">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="http://2.bp.blogspot.com/-HjBPkL-2eUk/U2vPSSfe-ZI/AAAAAAAAFT4/-RGx67UNs5I/s1600/MONO.jpg" style="width:100%" onclick="currentSlide(3)" alt="esquema 3">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://img.over-blog-kiwi.com/1/20/80/33/20171102/ob_c4cb19_3-religiones-islam-esquema.jpg" style="width:100%" onclick="currentSlide(4)" alt="esquema 4">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://t1.up.ltmcdn.com/es/posts/7/9/1/caracteristicas_del_cristianismo_medieval_5197_4_600.jpg" style="width:100%" onclick="currentSlide(5)" alt="esquema 5">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="http://3.bp.blogspot.com/_hCrQ7ozF4JY/TSdPTU6IvXI/AAAAAAAAAAg/O-TdUrUYMEU/s1600/Feuerbach.jpg" style="width:100%" onclick="currentSlide(6)" alt="esquema 6">
+    </div>
+  </div>
+</div>
+      </div>
+
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <h4>LIBROS y APUNTES</h4><br>
+        <hr class="w3-clear">
+        <p>aquí voy a insertar un pdf del libro</p>
+      </div>  
+
+    <!-- End Middle Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-col m2">
+      <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+          <p>BIBLIA</p>
+          <img src="data:image/jpeg;base64,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" alt="Forest" style="width:100%;">
+          <p><strong>todas las citas al alcance de la mano</strong></p>
+          <p>busca lo que necesites</p>
+          <p><button class="w3-button w3-block w3-theme-l4" onclick="biblia()">ENTRAR</button></p>
+        </div>
+      </div>
+      <br>
+
+      <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+          <p>COSAS IMPORTANTES</p>
+          <textarea id="w3review" name="w3review" rows="4" cols="15">Escribe aquí...</textarea>
+          <div class="w3-row w3-opacity">
+          </div>
+        </div>
+      </div>
+      <br>     
+
+    <!-- End Right Column -->
+    </div>
+
+  <!-- End Grid -->
+  </div>
+
+<!-- End Page Container -->
+</div>
+<br>
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-d3 w3-padding-16">
+  <h5>Página web personal, creada gratuitamente por epuntoele13@gmail.com</h5>
+</footer>
+
+<footer class="w3-container w3-theme-d5">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+<script>
+// Accordion
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-theme-d1";
+  } else { 
+    x.className = x.className.replace("w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-theme-d1", "");
+  }
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+function vreli() {
+  window.open("https://www.youtube.com/watch?v=7_sArxpUQho")
+}
+function biblia() {
+  window.open("https://www.biblia.es/biblia-online.php")
+}
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
 
 </body>
-</html>
+</html> 

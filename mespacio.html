@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>MI ESPACIO</title>
+<link href="https://images.emojiterra.com/google/noto-emoji/v2.034/512px/1f4da.png" rel="icon">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -10,6 +11,26 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 180px;
+  height: 250px;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
 </style>
 </head>
 <body class="w3-theme-l5">
@@ -20,7 +41,6 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
   <a href="./index1.html" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Inicio</a>
   <a href="./clase.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News">Clase</a>
-  <a href="./casa.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings">Casa</a>
   <a href="./Extraescolares.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages">Extraescolares</a>
    <a href="./mespacio.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages">Mi espacio</a>
 
@@ -28,13 +48,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
  </div>
 </div>
 
-<!-- Navbar on small screens -->
-<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
-  <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large">My Profile</a>
-</div>
+
 
 <!-- Page Container -->
 <div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
@@ -45,7 +59,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
       <!-- Profile -->
       <div class="w3-card w3-round w3-white">
         <div class="w3-container">
-         <h4 class="w3-center">My Profile</h4>
+         <h4 class="w3-center">PERFIL</h4>
          <p class="w3-center"><img src="https://us.123rf.com/450wm/liravega258/liravega2581901/liravega258190100016/122214182-estudio-de-dise%C3%B1o-dise%C3%B1o-dibujo-fotograf%C3%ADa-dise%C3%B1o-gr%C3%A1fico-educaci%C3%B3n-creatividad-arte-ideas-ilustraci.jpg" class="w3-circle" style="height:200px;width:200px" alt="Avatar"></p>
          <hr>
          <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Elena León</p>
@@ -58,129 +72,94 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
       <!-- Accordion -->
       <div class="w3-card w3-round">
         <div class="w3-white">
-          <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> My Groups</button>
+          <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i>DATOS</button>
+
           <div id="Demo1" class="w3-hide w3-container">
-            <p id="demo"></p>
+            <p id="demo">PELÍCULA FAVORITA: como la vida misma <br>
+              SERIES FAVORITAS: Gotham y Stranger Things<br>
+              ACTOR FAVORITO: Josh Duhamel <br>
+              ACTRIZ FAVORITA:Natalia Dyer<br>
+            CANCIÓN FAVORITA ACTUAL: Silence</p>
           </div>
-          <button onclick="myFunction('Demo2')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> My Events</button>
-          <div id="Demo2" class="w3-hide w3-container">
-            <p>Some other text..</p>
-          </div>
-          <button onclick="myFunction('Demo3')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-users fa-fw w3-margin-right"></i> My Photos</button>
-          <div id="Demo3" class="w3-hide w3-container">
-         <div class="w3-row-padding">
-         <br>
-           <div class="w3-half">
-             <img src="/w3images/lights.jpg" style="width:100%" class="w3-margin-bottom">
-           </div>
-           <div class="w3-half">
-             <img src="/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
-           </div>
-           <div class="w3-half">
-             <img src="/w3images/mountains.jpg" style="width:100%" class="w3-margin-bottom">
-           </div>
-           <div class="w3-half">
-             <img src="/w3images/forest.jpg" style="width:100%" class="w3-margin-bottom">
-           </div>
-           <div class="w3-half">
-             <img src="/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
-           </div>
-           <div class="w3-half">
-             <img src="/w3images/snow.jpg" style="width:100%" class="w3-margin-bottom">
-           </div>
-         </div>
-          </div>
+
         </div>      
       </div>
       <br>
       
-      <!-- Interests --> 
-      <div class="w3-card w3-round w3-white w3-hide-small">
-        <div class="w3-container">
-          <p>Interests</p>
-          <p>
-            <span class="w3-tag w3-small w3-theme-d5">News</span>
-            <span class="w3-tag w3-small w3-theme-d4">W3Schools</span>
-            <span class="w3-tag w3-small w3-theme-d3">Labels</span>
-            <span class="w3-tag w3-small w3-theme-d2">Games</span>
-            <span class="w3-tag w3-small w3-theme-d1">Friends</span>
-            <span class="w3-tag w3-small w3-theme">Games</span>
-            <span class="w3-tag w3-small w3-theme-l1">Friends</span>
-            <span class="w3-tag w3-small w3-theme-l2">Food</span>
-            <span class="w3-tag w3-small w3-theme-l3">Design</span>
-            <span class="w3-tag w3-small w3-theme-l4">Art</span>
-            <span class="w3-tag w3-small w3-theme-l5">Photos</span>
-          </p>
-        </div>
-      </div>
-      <br>
+     
       
-      <!-- Alert Box -->
-      <div class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
-        <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l3 w3-display-topright">
-          <i class="fa fa-remove"></i>
-        </span>
-        <p><strong>Hey!</strong></p>
-        <p>People are looking at your profile. Find out who.</p>
-      </div>
+    
     
     <!-- End Left Column -->
     </div>
     
     <!-- Middle Column -->
     <div class="w3-col m7">
-    
-      <div class="w3-row-padding">
-        <div class="w3-col m12">
-          <div class="w3-card w3-round w3-white">
-            <div class="w3-container w3-padding">
-              <h6 class="w3-opacity">Social Media template by w3.css</h6>
-              <p contenteditable="true" class="w3-border w3-padding">Status: Feeling Blue</p>
-              <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  Post</button> 
-            </div>
-          </div>
-        </div>
-      </div>
       
       <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-        <img src="/w3images/avatar2.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
-        <span class="w3-right w3-opacity">1 min</span>
-        <h4>John Doe</h4><br>
-        <hr class="w3-clear">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  
+        <h2 align="center">MIS FAMOSOS FAVORITOS</h2><br>
+        <p>Mis famosos favoritos<br>TOP 15:</p>
           <div class="w3-row-padding" style="margin:0 -16px">
-            <div class="w3-half">
-              <img src="/w3images/lights.jpg" style="width:100%" alt="Northern Lights" class="w3-margin-bottom">
+            <div class="gallery" align="center">
+              <img src="https://img.peliplat.com/api/resize/v1?imagePath=std/201612/a/1/a116509f162c0954fa98ca3383f1b190.jpg&mode=FILL&width=340&height=510&limit=false&c=1.jpg" style="width:180px height 200px" alt="Northern Lights" class="w3-margin-bottom">
             </div>
-            <div class="w3-half">
-              <img src="/w3images/nature.jpg" style="width:100%" alt="Nature" class="w3-margin-bottom">
+            <div class="gallery">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU-TjBWFv5TzhedwF_d4fgSd4p5OmnMqQLJW_Ntz-Cjd500nybMq2WaHN2RVb4kCPxLWA&usqp=CAU" style="width:180px height 200px" alt="Nature" class="w3-margin-bottom">
           </div>
+           <div class="gallery">
+              <img src="https://w0.peakpx.com/wallpaper/695/393/HD-wallpaper-natalia-dyer-women-actress-blue-eyes-long-hair-brunette-green-background-black-jackets.jpg" alt="Nature" class="w3-margin-bottom">
+          </div>
+           <div class="gallery">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/CharlieHeaton2017_%28cropped%29.jpg/800px-CharlieHeaton2017_%28cropped%29.jpg" alt="Nature" class="w3-margin-bottom">
+          </div>
+           <div class="gallery">
+              <img src="https://i.pinimg.com/originals/41/63/66/4163668b86c5934c06a38e718164a418.png" alt="Nature" class="w3-margin-bottom">
+          </div>
+           <div class="gallery">
+              <img src="https://inazumaelevenwikialbert.files.wordpress.com/2017/07/kazemaru_go.jpg" alt="Nature" class="w3-margin-bottom">
+          </div>
+           <div class="gallery">
+              <img src="https://i.pinimg.com/originals/05/65/df/0565df3bca2bf4b5a8f9bca881a8c799.jpg" alt="Nature" class="w3-margin-bottom">
+          </div>
+
+ <div class="gallery">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Lucas_Vazquez.JPG/800px-Lucas_Vazquez.JPG" alt="Nature" class="w3-margin-bottom">
+          </div>
+
+ <div class="gallery">
+              <img src="https://i.pinimg.com/originals/f0/3f/6a/f03f6ac9d98eaf87e512f9345e041612.jpg" alt="Nature" class="w3-margin-bottom">
+          </div>
+
+ <div class="gallery">
+              <img src="https://i.pinimg.com/474x/1b/c6/02/1bc6026775dfc69f874fd2fbe85f3119.jpg" alt="Nature" class="w3-margin-bottom">
+          </div>
+          <div class="gallery">
+              <img src="https://i.pinimg.com/originals/ca/d4/da/cad4dac1769bf3a650c80716f25b2e04.jpg" alt="Nature" class="w3-margin-bottom">
+          </div>
+
+ <div class="gallery">
+              <img src="https://i.pinimg.com/236x/e2/5c/bc/e25cbcc25647dc554642c219c3f24a46.jpg" alt="Nature" class="w3-margin-bottom">
+          </div>
+
+           <div class="gallery">
+              <img src="https://static.wikia.nocookie.net/doblaje/images/5/5c/Zendaya.jpg/revision/latest?cb=20220405231400&path-prefix=es" alt="Nature" class="w3-margin-bottom">
+          </div>
+
+ <div class="gallery">
+              <img src="https://img.ecartelera.com/noticias/63600/63698-m.jpg" alt="Nature" class="w3-margin-bottom">
+          </div>
+
+ <div class="gallery">
+              <img src="https://mui.fitness/__export/1653603171799/sites/muifitness/img/2022/05/26/handsome-simple-robert-downey-jr-38vs0t2lrabcssvr-sharpened_upscaled_x2.jpg_180260578.jpg" alt="Nature" class="w3-margin-bottom">
+          </div>
+
+
+
         </div>
-        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
-        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
       </div>
       
-      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-        <img src="/w3images/avatar5.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
-        <span class="w3-right w3-opacity">16 min</span>
-        <h4>Jane Doe</h4><br>
-        <hr class="w3-clear">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
-        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
-      </div>  
 
-      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-        <img src="/w3images/avatar6.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
-        <span class="w3-right w3-opacity">32 min</span>
-        <h4>Angie Jane</h4><br>
-        <hr class="w3-clear">
-        <p>Have you seen this?</p>
-        <img src="/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
-        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
-      </div> 
       
     <!-- End Middle Column -->
     </div>
@@ -189,41 +168,33 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
     <div class="w3-col m2">
       <div class="w3-card w3-round w3-white w3-center">
         <div class="w3-container">
-          <p>Upcoming Events:</p>
-          <img src="/w3images/forest.jpg" alt="Forest" style="width:100%;">
-          <p><strong>Holiday</strong></p>
-          <p>Friday 15:00</p>
-          <p><button class="w3-button w3-block w3-theme-l4">Info</button></p>
+          <p>INAZUMA ELEVEN</p>
+          <img src="https://static.wikia.nocookie.net/inazumaelevengo5/images/5/57/Inazuma_Eleven_GO_Logo_Europeo.png/revision/latest?cb=20130512010051&path-prefix=es" alt="Forest" style="width:100%;">
+          <p><button class="w3-button w3-block w3-theme-l4" onclick="inazuma()">ENTRAR</button></p>
         </div>
       </div>
       <br>
-      
       <div class="w3-card w3-round w3-white w3-center">
         <div class="w3-container">
-          <p>Friend Request</p>
-          <img src="/w3images/avatar6.png" alt="Avatar" style="width:50%"><br>
-          <span>Jane Doe</span>
-          <div class="w3-row w3-opacity">
-            <div class="w3-half">
-              <button class="w3-button w3-block w3-green w3-section" title="Accept"><i class="fa fa-check"></i></button>
-            </div>
-            <div class="w3-half">
-              <button class="w3-button w3-block w3-red w3-section" title="Decline"><i class="fa fa-remove"></i></button>
-            </div>
-          </div>
+          <p>RENDERFOREST</p>
+          <img src="https://yt3.ggpht.com/ytc/AKedOLTMnuZdCOYiMpTMOSLXl_poH13CrejrCT4RHMa5wA=s900-c-k-c0x00ffffff-no-rj" alt="Forest" style="width:100%;">
+          <p><button class="w3-button w3-block w3-theme-l4" onclick="renderforest()">ENTRAR</button></p>
+        </div>
+      </div>
+      <br>
+
+      <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+          <p>ANIMAKER</p>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsXsBq8HXoXV2_YAJ_DSy0iHsmrCDkW3cmdlOPr6sDmgYbZg-tm4iNGH99tsU-i2B3R_s&usqp=CAU" alt="Forest" style="width:100%;">
+          <p><button class="w3-button w3-block w3-theme-l4" onclick="animaker()">ENTRAR</button></p>
         </div>
       </div>
       <br>
       
-      <div class="w3-card w3-round w3-white w3-padding-16 w3-center">
-        <p>ADS</p>
-      </div>
-      <br>
+    </div>
       
-      <div class="w3-card w3-round w3-white w3-padding-32 w3-center">
-        <p><i class="fa fa-bug w3-xxlarge"></i></p>
-      </div>
-      
+     
     <!-- End Right Column -->
     </div>
     
@@ -233,15 +204,15 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 <!-- End Page Container -->
 </div>
 <br>
-
 <!-- Footer -->
 <footer class="w3-container w3-theme-d3 w3-padding-16">
-  <h5>Footer</h5>
+  <h5>Página web personal, creada gratuitamente por epuntoele13@gmail.com</h5>
 </footer>
 
 <footer class="w3-container w3-theme-d5">
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer>
+ 
  
 <script>
 // Accordion
@@ -265,6 +236,15 @@ function openNav() {
   } else { 
     x.className = x.className.replace(" w3-show", "");
   }
+}
+function inazuma(){
+  window.open("./inazumaeleven.html")
+}
+function renderforest(){
+  window.open("https://www.renderforest.com/")
+}
+function animaker(){
+  window.open("https://www.animaker.es/")
 }
 </script>
 

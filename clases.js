@@ -36,3 +36,6 @@ function educacionfisica() {
 function religion() {
   window.open("./religion.html")
 }
+function kahoot() {
+  window.open("https://kahoot.it/")
+}
