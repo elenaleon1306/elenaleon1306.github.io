@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>S51</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+  .container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 400px;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 400px;
+  height: 0;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  height: 100%;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#inicio" class="w3-bar-item w3-button"><b>OLIMPIADAS
+    </b>SILOS51</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#projects" class="w3-bar-item w3-button">Actividades</a>
+      <a href="#about" class="w3-bar-item w3-button">Formularios</a>
+      <a href="#contact" class="w3-bar-item w3-button">Más</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img class="w3-image" src="https://img.freepik.com/vrije-vector/organisch-plat-zomerscenespakket_23-2148952224.jpg?w=1380&t=st=1658566394~exp=1658566994~hmac=2e2cfc67361926e386fdc3f5588a80cf284b42fb290012f35d33f1c70e72c185" alt="Architecture" width="1500" height="800">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>VERANO</b></span> <span class="w3-hide-small w3-text-light-grey">2022</span></h1>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+  <!-- Project Section -->
+  <div class="w3-container w3-padding-32" id="projects">
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16 w3-center">ACTIVIDADES</h2>
+  </div>
+  <div id="myBtnContainer" align="center">
+  <button class="btn active" onclick="filterSelection('all')"> Todas</button>
+  <button class="btn" onclick="filterSelection('nature')"> Individuales</button>
+  <button class="btn" onclick="filterSelection('cars')"> Por equipos</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column nature">
+    <div class="content">
+      <img src="https://cdn-icons-png.flaticon.com/512/4721/4721069.png" alt="Mountains" style="width:130px">
+      <h5>Carrera ida</h5>
+      <p>DEPORTE INDIVIDUAL <br>
+      CATEGORÍAS <br>
+    <table>
+  <tr>
+    <td>-4</td>
+    <td>5-6</td>
+    <td>7-10</td>
+  </tr>
+  <tr>
+    <td>11-14</td>
+    <td>+15 FEMENINO</td>
+    <td>+15 MASCULINO</td>
+  </tr>
+</table> <br>
+Ganará el que menos tarde en hacerse un largo al estilo que escoja.</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+    <img src="https://cdn-icons-png.flaticon.com/512/309/309025.png" alt="Lights" style="width:130px">
+      <h5>Carrera ida y vuelta</h5>
+      <p>DEPORTE INDIVIDUAL <br>
+      CATEGORÍAS
+    <br>
+    <table>
+  <tr>
+    <td>-4</td>
+    <td>5-6</td>
+    <td>7-10</td>
+  </tr>
+  <tr>
+    <td>11-14</td>
+    <td>+15 FEMENINO</td>
+    <td>+15 MASCULINO</td>
+  </tr>
+</table> <br>
+Ganará el que menos tarde en hacerse 2 largos al estilo que escoja.</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+    <img src="https://cdn-icons-png.flaticon.com/512/1499/1499931.png" alt="Nature" style="width:130px" >
+      <h5>Largos sin respirar</h5>
+      <p>DEPORTE INDIVIDUAL <br>
+      CATEGORÍAS
+    <br>
+    <table>
+  <tr>
+    <td>-4</td>
+    <td>5-6</td>
+    <td>7-10</td>
+  </tr>
+  <tr>
+    <td>11-14</td>
+    <td>+15 FEMENINO</td>
+    <td>+15 MASCULINO</td>
+  </tr>
+</table> <br>
+Respira antes de empezar. Cosigue hacer el mayor número de largos sin respirar seguidos. El que más lejos llegue ganará.</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+      <img src="https://cdn-icons-png.flaticon.com/512/3126/3126611.png" alt="Mountains" style="width:130px">
+      <h5>Saltos</h5>
+      <p>DEPORTE INDIVIDUAL <br>
+      CATEGORÍAS
+    <br>
+    <table>
+  <tr>
+    <td>TODAS LAS EDADES</td>
+
+  </tr>
+</table> <br>
+Se escogerá al jurado al azar. Se dividirán los participantes y se les repartirá una forma de tirarse a la piscina. De cada grupo se clasificará uno para la siguiente ronda.</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+      <img src="https://cdn-icons-png.flaticon.com/512/2817/2817719.png" alt="Mountains" style="width:130px">
+      <h5>Tiros a porteria</h5>
+      <p>DEPORTE INDIVIDUAL <br>
+      CATEGORÍAS
+      <br>
+    <table>
+  <tr>
+    <td>JUNIOR</td>
+    <td>SENIOR</td>
+  </tr>
+</table> <br>
+Eliminatoria de penaltis. Si metes un gol pasarás a la siguiente fase y si fallas serás eliminado.</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+      <img src="https://cdn-icons-png.flaticon.com/512/3131/3131763.png" alt="Mountains" style="width:130px">
+      <h5>Recoger aros</h5>
+      <p>DEPORTE INDIVIDUAL <br>
+      CATEGORÍAS
+     <br>
+    <table>
+  <tr>
+    <td>TODAS LAS EDADES (-4 A 7)</td>
+  </tr>
+</table>
+<br> Este es un juego para los pequeños de la casa en el que se divertirán a lo grande intentando recoger en la pisicna el mayor número de aros en el menor tiempo posible.</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+      <img src="https://cdn-icons-png.flaticon.com/512/5496/5496293.png" alt="Car" style="width:130px">
+      <h5>Voleibol</h5>
+      <p>DEPORTE EN EQUIPO <br>
+      GRUPOS
+       <br>
+    <table>
+  <tr>
+    <td>EQUIPOS DE 3 ( MÍNIMO 1 NIÑO)</td>
+  </tr>
+</table><br>
+El primer equipo en hacer 15 puntos ganará el partido <br>
+<a href="https://okdiario.com/curiosidades/conoce-reglas-basicas-del-voleibol-2744240">REGLAS DE VOLEIBOL</a>
+</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+    <img src="https://cdn-icons.flaticon.com/png/512/2371/premium/2371306.png?token=exp=1658570461~hmac=fda185e50c20b724ef7d1e0d886e8f5b" alt="Car" style="width:130px">
+      <h5>Waterpolo</h5>
+      <p>DEPORTE EN EQUIPO <br>
+      GRUPOS
+       <br>
+    <table>
+  <tr>
+    <td>EQUIPOS DE 4, 5 O 6 (MÍNIMO 2 NIÑOS)</td>
+  </tr>
+</table>
+<br> El primer equipo en meter 3 goles será el vencedor.
+<br> <a href="https://waterpolomadrid.com/2015/01/07/reglas-basicas-del-waterpolo/ target_blank">REGLAS DE WATERPOLO</a></p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+    <img src="https://cdn-icons-png.flaticon.com/512/6287/6287010.png" alt="Car" style="width:130px">
+      <h5>20 pases</h5>
+      <p>DEPORTE EN EQUIPO <br>
+      GRUPOS
+       <br>
+    <table>
+  <tr>
+    <td>EQUIPOS DE 4 (MÍNIMO 2 NIÑOS)</td>
+  </tr>
+</table> <br>
+Consigue que tu equipo de 20 pases seguidos con un balón sin que el equipo contrario os lo corte. Ganará el equipo que primero lo consiga.</p>
+    </div>
+</div>
+ <div class="column cars">
+    <div class="content">
+    <img src="https://cdn-icons-png.flaticon.com/512/2481/2481306.png" alt="Car" style="width:130px">
+      <h5>Relevos</h5>
+      <p>DEPORTE EN EQUIPO <br>
+      GRUPOS
+       <br>
+    <table>
+  <tr>
+    <td>EQUIPOS DE 4 (2 NIÑOS Y 2 ADULTOS)</td>
+  </tr>
+</table><br>
+Consigue llegar el primero a la meta.Los grupos se dividirán y se colocarán en ambos extremos del largo de la piscina.Iniciará la carrera un jugador y tendrá que llegar a la otra orilla lo más rápido que pueda, cuando toque el bordillo, saltará el siguiente. Así hasta que el último del equipo llegue a la meta.</p>
+    </div>
+</div>
+ <div class="column cars">
+    <div class="content">
+    <img src="https://cdn-icons-png.flaticon.com/512/7223/7223234.png" alt="Car" style="width:130px">
+      <h5>Palas</h5>
+      <p>DEPORTE EN EQUIPO <br>
+      GRUPOS
+       <br>
+    <table>
+  <tr>
+    <td>PAREJAS</td>
+  </tr>
+</table> <br>
+Para ganar consigue hacer en mayor número de toques seguidos en 1 minuto.Si la pelota se cae, el cronometro no se dentendrá pero se reiniciarán los toques.</p>
+    </div>
+</div>
+  
+  </div>
+    </div>
+  </div>
+<hr>
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="about">
+  <div class="w3-container w3-padding-32" id="projects">
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16 w3-center">FORMULARIOS</h2>
+  </div>
+    <p>Si ya has echado un ojo a toda la página web, es hora de apuntarse a las actividades que más te hayan gustado.Para ello te dejamos aquí abajo dos formularios.<br>
+     Uno de ellos es el individual, pensarás un nombre en clave(protección de datos). Si quieres que sea más divertido te recomiendo que no le digas a nadie tu apodo, de esa forma tampoco será posible amañar sorteor de posiciones.<br>
+     El otro formulario es el de equipos, si tu equipo se quiere apuntar a alguna actividad solo será necesario que un miembro se registre.
+    </p>
+       <div class="row" align="center">
+        <div class="column left" align="center">
+    <div class="content">
+      <img src="https://cdn-icons-png.flaticon.com/512/5894/5894059.png" alt="Mountains" style="width:130px">
+      <h5>DEPORTES INDIVIDULES</h5>
+      <p><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe-rC3AQityqRnN5y1xWErsUOhKW0azqEao5ZQcBjegK8UPWA/viewform?embedded=true" width="300" height="400" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe><br></p>
+    </div>
+  </div>
+    <div class="column right" align="center">
+    <div class="content">
+      <img src="https://cdn-icons-png.flaticon.com/512/1534/1534938.png" alt="Mountains" style="width:130px">
+      <h5>DEPORTES POR EQUIPOS</h5>
+      <p> <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe9nEWnW7WzrFsKcyr6vyyoHBnmUG3PO90FEHO46rqHGIL_og/viewform?embedded=true" width="300" height="400" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe></p>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="/w3images/team2.jpg" alt="John" style="width:100%">
+      <h3>John Doe</h3>
+      <p class="w3-opacity">CEO & Founder</p>
+      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
+      <h3>Jane Doe</h3>
+      <p class="w3-opacity">Architect</p>
+      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="/w3images/team3.jpg" alt="Mike" style="width:100%">
+      <h3>Mike Ross</h3>
+      <p class="w3-opacity">Architect</p>
+      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="/w3images/team4.jpg" alt="Dan" style="width:100%">
+      <h3>Dan Star</h3>
+      <p class="w3-opacity">Architect</p>
+      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-32" id="contact">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
+    <p>Lets get in touch and talk about your next project.</p>
+    <form action="/action_page.php" target="_blank">
+      <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="Subject">
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Comment" required name="Comment">
+      <button class="w3-button w3-black w3-section" type="submit">
+        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+      </button>
+    </form>
+  </div>
+  
+<!-- Image of location/map -->
+<div class="w3-container">
+  <img src="/w3images/map.jpg" class="w3-image" style="width:100%">
+</div>
+
+<!-- End page content -->
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+<script>
+  filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+</body>
+</html>
