@@ -128,43 +128,27 @@ td, th {
   text-align: left;
   padding: 8px;
 }
-* {
-  box-sizing: border-box;
+@media screen and (max-width: 980px){
+    #contenedor{
+        width: 90%;
+    }
+    #contenido{
+        width: 60%;
+    }
+    #barra_lateral{
+        width:30%;
+    }
 }
-
-.menu {
-  float: left;
-  width: 20%;
-  text-align: center;
-}
-
-.menu a {
-  padding: 8px;
-  margin-top: 7px;
-  display: block;
-  width: 100%;
-  color: black;
-}
-
-.main {
-  float: left;
-  width: 60%;
-  padding: 0 20px;
-}
-
-.right {
-  float: left;
-  width: 20%;
-  padding: 15px;
-  margin-top: 7px;
-  text-align: center;
-}
-
-@media only screen and (max-width: 620px) {
-  /* For mobile phones: */
-  .menu, .main, .right {
-    width: 100%;
-  }
+@media screen and (max-width: 480px){
+    #encabezado{
+        height: auto;
+    }
+    #contenido{
+        width: auto;
+    }
+    #barra_lateral{
+        display:none;
+    }
 }
 </style>
 </head>
@@ -183,19 +167,12 @@ td, th {
     </div>
   </div>
 </div>
-<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
-  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TOUR</a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
-</div>
 
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
   <img class="w3-image" src="https://img.freepik.com/vrije-vector/organisch-plat-zomerscenespakket_23-2148952224.jpg?w=1380&t=st=1658566394~exp=1658566994~hmac=2e2cfc67361926e386fdc3f5588a80cf284b42fb290012f35d33f1c70e72c185" alt="Architecture" width="1500" height="800">
   <div class="w3-display-middle w3-margin-top w3-center">
-    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min" style="max-width:500px;"><b>VERANO</b></span> <span class="w3-hide-small w3-text-light-grey">2022</span></h1>
+    <h3 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min" style="max-width:1500px;"><b>VERANO</b></span> <span class="w3-hide-small w3-text-light-grey">2022</span></h3>
   </div>
 </header>
 
