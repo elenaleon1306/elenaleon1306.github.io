@@ -20,10 +20,6 @@ td, th {
   text-align: left;
   padding: 8px;
 }
-.navbar {
-  position: fixed;
-  top: 0;
-}
 </style>
 </head>
 <body class="w3-light-grey w3-content" style="max-width:1600px">
@@ -34,15 +30,15 @@ td, th {
     <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-padding w3-hover-grey" title="close menu">
       <i class="fa fa-remove"></i>
     </a>
-    <img src="https://cdn-icons-png.flaticon.com/512/1027/1027251.png" style="width:100%;" class="w3-round"><br><br>
+    <img src="https://logo-maker-api.s3.us-west-2.amazonaws.com/projects/62e3d434277520ff16d471bd/thumbnail.png?AWSAccessKeyId=AKIA6LFXYJ6BXG4EKM6A&Expires=1659363576&Signature=xJ3%2Fd3AtCbw56h1gMXJyAd6owDg%3D" style="width:100%;" class="w3-round"><br><br>
     <h4><b>INICIO </b></h4>
     <p class="w3-text-grey">Actualizada ahora</p>
   </div>
   <div class="w3-bar-block">
-    <a href="./silos51" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>INICIO</a> 
-    <a href="./actividades" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-gamepad fa-fw w3-margin-right"></i>ACTIVIDADES</a> 
-    <a href="./sorteos" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-trophy fa-fw w3-margin-right"></i>SORTEOS</a>
-     <a href="./formularios" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user-circle-o fa-fw w3-margin-right"></i>¡PARTICIPA!</a>
+    <a href="#INICIO" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>INICIO</a> 
+    <a href="#ACTIVIDADES" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-gamepad fa-fw w3-margin-right"></i>ACTIVIDADES</a> 
+    <a href="#FORM" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user-circle-o fa-fw w3-margin-right"></i>¡PARTICIPA!</a>
+    <a  onclick="myFunction()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user-circle-o fa-fw w3-margin-right"></i>SORTEO</a>
   </div>
 </nav>
 
@@ -51,7 +47,7 @@ td, th {
 
   <!-- Header -->
   <header id="INICIO">
-<img src="https://cdn-icons-png.flaticon.com/512/3208/3208164.png" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity">
+<img src="https://logo-maker-api.s3.us-west-2.amazonaws.com/projects/62e3d434277520ff16d471bd/thumbnail.png?AWSAccessKeyId=AKIA6LFXYJ6BXG4EKM6A&Expires=1659363576&Signature=xJ3%2Fd3AtCbw56h1gMXJyAd6owDg%3D" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity">
     <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
     <div class="w3-container">
     <h1 align="center"><b>OLIMPIADAS SILOS 51</b>  VERANO 2022</h1>
@@ -357,6 +353,11 @@ var x = setInterval(function() {
     document.getElementById("demo").innerHTML = "EXPIRED";
   }
 }, 1000);
+
+
+function myFunction() {
+  alert("Esta página aún no está disponible. Se desbloqueará un día antes del evento. Siga navegando por la página");
+}
 </script>
 
 </body>
