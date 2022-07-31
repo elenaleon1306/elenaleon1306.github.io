@@ -20,6 +20,10 @@ td, th {
   text-align: left;
   padding: 8px;
 }
+.navbar {
+  position: fixed;
+  top: 0;
+}
 </style>
 </head>
 <body class="w3-light-grey w3-content" style="max-width:1600px">
@@ -35,9 +39,10 @@ td, th {
     <p class="w3-text-grey">Actualizada ahora</p>
   </div>
   <div class="w3-bar-block">
-    <a href="#INICIO" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>INICIO</a> 
-    <a href="#ACTIVIDADES" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-gamepad fa-fw w3-margin-right"></i>ACTIVIDADES</a> 
-    <a href="#FORM" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user-circle-o fa-fw w3-margin-right"></i>¡PARTICIPA!</a>
+    <a href="./silos51" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>INICIO</a> 
+    <a href="./actividades" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-gamepad fa-fw w3-margin-right"></i>ACTIVIDADES</a> 
+    <a href="./sorteos" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-trophy fa-fw w3-margin-right"></i>SORTEOS</a>
+     <a href="./formularios" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user-circle-o fa-fw w3-margin-right"></i>¡PARTICIPA!</a>
   </div>
 </nav>
 
@@ -51,13 +56,16 @@ td, th {
     <div class="w3-container">
     <h1 align="center"><b>OLIMPIADAS SILOS 51</b>  VERANO 2022</h1>
     <img src="https://img.freepik.com/vrije-vector/organisch-plat-zomerscenespakket_23-2148952224.jpg?w=1380&t=st=1658566394~exp=1658566994~hmac=2e2cfc67361926e386fdc3f5588a80cf284b42fb290012f35d33f1c70e72c185" alt="carrera ida icono" style="width:100%">
+    <div class="card bg-info text-white" align="center">
+<h1 id="demo"  class="card-body"></h1>
+</div>
         <div class=" w3-container" >
     <h3 align="center"><b>Bienvenidos a la página de las 2º Olimpiadas de la urbanización</b></h3>
     <h4 align="center"><b>
 FECHA:sábado 3 de septiembre, 2022</b></h4>
       <p align="center">
-              <p>Solo para vecinos de la urbanización<br>
-      Se aconseja no traer invitados a participar</p>
+              <p align="center">Solo para vecinos de la urbanización<br>
+      Se aconseja no traer invitados a participar
 Estimados vecinos, es un placer informarles de las 2º Olimpiadas de la piscina del vecindario.
 Los juegos están pensados para adultos y niños (todos tienen opción de medalla).
 Rellena los formularios para participar.
@@ -321,6 +329,34 @@ function w3_close() {
     document.getElementById("mySidebar").style.display = "none";
     document.getElementById("myOverlay").style.display = "none";
 }
+// Set the date we're counting down to
+var countDownDate = new Date("Sep 3, 2022 11:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
 </script>
 
 </body>
