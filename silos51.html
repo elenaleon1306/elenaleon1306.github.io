@@ -11,7 +11,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "arial", sans-serif}
+body,h1,h2,h3,h4,h5,h6 {
+  font-family: "arial", sans-serif
+  color: #00ff00;
+
+}
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -24,22 +28,26 @@ td, th {
   text-align: left;
   padding: 8px;
 }
+img{
+  border-radius: 30px;
+  padding: 5px;
+}
 </style>
 </head>
-<body class="w3-light-grey w3-content" style="max-width:1600px">
+<body class="w3-light-blue w3-content" style="max-width:1600px">
 
 <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+<nav class="w3-sidebar w3-collapse w3-indigo w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
   <div class="w3-container">
     <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-padding w3-hover-grey" title="close menu">
       <i class="fa fa-remove"></i>
     </a>
     <img src="https://logo-maker-api.s3.us-west-2.amazonaws.com/projects/62e3d434277520ff16d471bd/thumbnail.png?AWSAccessKeyId=AKIA6LFXYJ6BXG4EKM6A&Expires=1659953172&Signature=VTX7muFSC%2FuWJOS2T0eHGjVikp4%3D" style="width:100%;" class="w3-round"><br><br>
-    <h4><b>INICIO </b></h4>
-    <p class="w3-text-grey">Actualizada ahora</p>
+    <h3><b>MENÚ</b></h3>
+    <p class="w3-text-white">Actualizada ahora</p>
   </div>
   <div class="w3-bar-block">
-    <a href="#INICIO" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>INICIO</a> 
+    <a href="#INICIO" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-white"><i class="fa fa-th-large fa-fw w3-margin-right"></i>INICIO</a> 
     <a href="#ACTIVIDADES" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-gamepad fa-fw w3-margin-right"></i>ACTIVIDADES</a> 
     <a href="#FORM" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user-circle-o fa-fw w3-margin-right"></i>¡PARTICIPA!</a>
     <a  onclick="myFunction()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-random fa-fw w3-margin-right"></i>SORTEO</a>
