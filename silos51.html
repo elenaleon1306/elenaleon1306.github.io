@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <title>SILOS 51</title>
 <meta charset="UTF-8">
@@ -10,8 +10,16 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "arial", sans-serif}
+body,h1,h2,h3,h4,h5,h6 {font-family: "monaco",Monospace}
+.mySlides {display: none}
+img{
+  border-radius: 30px;
+  padding: 5px;
+}
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -20,6 +28,7 @@ table {
 }
 
 td, th {
+  font-family: "monaco" ,Monospace;
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
@@ -30,84 +39,79 @@ img{
 }
 </style>
 </head>
-<body class="w3-light-grey w3-content" style="max-width:1600px">
+<body>
 
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-light-blue w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
-  <div class="w3-container">
-    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-padding w3-hover-grey" title="close menu">
-      <i class="fa fa-remove"></i>
-    </a>
-    <img src="https://logo-maker-api.s3.us-west-2.amazonaws.com/projects/62e3d434277520ff16d471bd/thumbnail.png?AWSAccessKeyId=AKIA6LFXYJ6BXG4EKM6A&Expires=1659953172&Signature=VTX7muFSC%2FuWJOS2T0eHGjVikp4%3D" style="width:100%;" class="w3-round"><br><br>
-    <h4><b>INICIO </b></h4>
-    <p class="w3-text-grey">Actualizada ahora</p>
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-indigo w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">INICIO</a>
+    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ACTIVIDADES</a>
+    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">FORMULARIOS</a>
+    <a onclick="sorteo()" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SORTEOS</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">PARTICIPANTES<i class="fa fa-caret-down"></i></button>  
+      
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a>   <div class=" w3-indigo w3-round-large"><p>·INDIVIDUALES=  <b>9</b></p></div></a>
+    <a><div class=" w3-indigo w3-round-large "><p>·EQUIPOS= <b>3</b></p></div></a>
+      </div>
+    </div>
+    
   </div>
-  <div class="w3-bar-block">
-    <a href="#INICIO" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-black"><i class="fa fa-th-large fa-fw w3-margin-right"></i>INICIO</a> 
-    <a href="#ACTIVIDADES" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-gamepad fa-fw w3-margin-right"></i>ACTIVIDADES</a> 
-    <a href="#FORM" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user-circle-o fa-fw w3-margin-right"></i>¡PARTICIPA!</a>
-    <a  onclick="myFunction()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-random fa-fw w3-margin-right"></i>SORTEO</a>
-  </div>
-  <video width="100%" controls>
-  <source src="https://api.renderforest.com/api/v1/projects/63611308/download?key=b3a58bf16ba53eed02c3d6572f378b38:5841df87ebcde0b92599c6359e5042d28fd94638b9bbd7c0afc7d14395595b99d6469813fac178459aefef7eac13a6d9" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-  <div class="w3-panel w3-card"><p>PARTICIPANTES APUNTADOS <b>8</b></p></div>
-    <div class="w3-panel w3-card"><p>EQUIPOS APUNTADOS <b>3</b></p></div>
-</nav>
-
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:300px">
-
-  <!-- Header -->
-  <header id="INICIO">
-<img src="https://logo-maker-api.s3.us-west-2.amazonaws.com/projects/62e3d434277520ff16d471bd/thumbnail.png?AWSAccessKeyId=AKIA6LFXYJ6BXG4EKM6A&Expires=1659363576&Signature=xJ3%2Fd3AtCbw56h1gMXJyAd6owDg%3D" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity">
-    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
-    <div class="w3-container">
-    <h2 align="center"><b>OLIMPIADAS SILOS 51</b>  VERANO 2022</h2>
-    <img src="https://img.freepik.com/vrije-vector/organisch-plat-zomerscenespakket_23-2148952224.jpg?w=1380&t=st=1658566394~exp=1658566994~hmac=2e2cfc67361926e386fdc3f5588a80cf284b42fb290012f35d33f1c70e72c185" alt="carrera ida icono" style="width:100%">
-    <div class="well" align="center">
-
-<h1 id="demo"  class="card-body"></h1>
-
 </div>
 
-<a href="https://api.renderforest.com/api/v1/projects/63611308/download?key=b3a58bf16ba53eed02c3d6572f378b38:5841df87ebcde0b92599c6359e5042d28fd94638b9bbd7c0afc7d14395595b99d6469813fac178459aefef7eac13a6d9"></a>
-        <div class=" w3-container" >
-             <div class="well" align="center">
-    <h3 align="center"><b>Bienvenidos a la página de las 2º Olimpiadas de la urbanización</b></h3>
-    <h4 align="center"><b>
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ACTIVIDADES</a>
+  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">FORMULARIOS</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="sorteo()">SORTEOS</a>
+  <a></a>
+  <a>   <div class=" w3-indigo w3-round-large"><p>·INDIVIDUALES=  <b>8</b></p></div></a>
+    <a><div class=" w3-indigo w3-round-large "><p>·EQUIPOS= <b>3</b></p></div></a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <h2 align="center"><b>OLIMPIADAS SILOS 51</b><br>  VERANO 2022</h2>
+    <img src="https://img.freepik.com/vrije-vector/organisch-plat-zomerscenespakket_23-2148952224.jpg?w=1380&t=st=1658566394~exp=1658566994~hmac=2e2cfc67361926e386fdc3f5588a80cf284b42fb290012f35d33f1c70e72c185" alt="carrera ida icono" style="width:100%">
+  </div>
+   <div class=" w3-container" >
+             <div class="well">
+    <h4><b>Bienvenidos a la página de las 2º Olimpiadas de la urbanización.</b>
+    <b><br>
 FECHA:sábado 3 de septiembre, 2022</b></h4>
-      <p align="center">
-              <p align="center">
-Estimados vecinos, es un placer informarles de las 2º Olimpiadas de la piscina de la urbanización.
-Los juegos están pensados para adultos y niños (todos tienen opción de medalla).
-Rellena los formularios para participar.
-Envía este documento a cualquier vecino interesado en participar. Se pide responsabilidad y respeto. El último día para presentarse es el <b>jueves 1 de septiembre.</b>
+
+
+Estimados vecinos, es un placer informarles de las 2º Olimpiadas de la piscina de la urbanización.<br>
+Los juegos están pensados para adultos y niños (todos tienen opción de medalla).<br>
+Rellena los formularios para participar.<br>
+Envía este documento a cualquier vecino interesado en participar. Se pide responsabilidad y respeto.<br>
+El último día para presentarse es el <b>jueves 1 de septiembre.</b>
 <br>
 Solo para vecinos de la urbanización.<br>
 ¡Os esperamos!
 </p>
 </p>
 </div>
-   <div class="well" align="center">
- <h4 align="center"><b>HORARIOS</b></h4>
- <p align="center"><b>MAÑANA: largos sin respirar, saltos, recoger aros, waterpolo, 20 pases y palas( 11:15 a 14:30)</b><br>
-<b>TARDE: carreras, voleibol, relevos y penalties( 17:00 a 20:30)</b></p>
+   <div class="well">
+ <h4 ><b>HORARIOS</b></h4>
+ <p ><b>MAÑANA: largos sin respirar, saltos, recoger aros, waterpolo, 20 pases y palas<br>( 11:15 a 14:30).</b><br>
+<b>TARDE: carreras, voleibol, relevos y penalties. <br>( 17:00 a 20:30)</b></p>
 <p>Los horarios especificos de cada actividad se adecuarán al número de participantes que se presenten y se anunciará el mismo día de la competición en los carteles que se encontrarán abajo en las paredes.</p>
       </div>
+       <div class="well" >
+       <h4 ><b>PREMIOS</b></h4>
+       <p>Al final de cada prueba todos los participantes se llevarán un premio. Los tres primeros obtendrán una medalla y el resto un diploma con su nombre.</p>
     </div>
-       <div class="well" align="center">
-       <h4 align="center"><b>PREMIOS</b></h4>
-       <p align="center">Al final de cada prueba todos los participantes se llevarán un premio. Los tres primeros obtendrán una medalla y el resto un diploma con su nombre.</p>
-    </div>
-  </div>
-     <div class="well" align="center">
-           <h4 align="center"><b>MEDALLERO</b></h4>
-           <p align="center">Sin contenido hasta el sábado 3 de septiembre.</p>
+
+     <div class="well" >
+           <h4 ><b>MEDALLERO</b></h4>
+           <p >Sin contenido hasta el sábado 3 de septiembre.</p>
          </div>
               <div class="well" align="center">
-            <p align="center">ACTIVIDADES DE MAÑANA</p>
+            <h3 align="center">ACTIVIDADES DE MAÑANA</h3>
           </div>
            <table style="width:100%" >
   <tr>
@@ -189,8 +193,9 @@ Solo para vecinos de la urbanización.<br>
       </tr>
       
 </table>
+<br>
          <div class="well" align="center">
-            <p align="center">ACTIVIDADES DE TARDE</p>
+            <h3 align="center">ACTIVIDADES DE TARDE</h3>
                </div>
             <table style="width:100%">
   <tr>
@@ -301,16 +306,18 @@ Solo para vecinos de la urbanización.<br>
       </tr>
       
 </table>
-  </header>
 
+
+  <br>
   <!-- First Photo Grid-->
-   <div class="well" align="center">
-          <h1 align="center" id="ACTIVIDADES"><b>ACTIVIDADES</b></h1>
+   <div class="well" align="center" id="band">
+   <br>
+          <h1 align="center"><b>ACTIVIDADES</b></h1>
         </div>
   <div class="w3-row-padding">
     <div class="w3-third w3-container w3-margin-bottom">
       <img src="https://cdn-icons-png.flaticon.com/512/4721/4721069.png" alt="carrera ida icono" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
+      <div class="w3-container w3-light-grey">
         <p><h5><b>Carrera ida</b></h5>
       <p>DEPORTE INDIVIDUAL <br>
       CATEGORÍAS: <br>
@@ -331,7 +338,7 @@ Ganará el que primero llegue a la meta al estilo que escoja. 1 largo (19,5 metr
     </div>
     <div class="w3-third w3-container w3-margin-bottom">
       <img src="https://cdn-icons-png.flaticon.com/512/309/309025.png" alt="carrera ida y vuelta icono" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
+      <div class="w3-container w3-light-grey">
         <p><h5><b>Carrera ida y vuelta</b></h5>
       <p>DEPORTE INDIVIDUAL <br>
       CATEGORÍAS:
@@ -353,7 +360,7 @@ Ganará el que primero llegue a la meta al estilo que escoja. 2 largos ( 39 metr
     </div>
     <div class="w3-third w3-container">
       <img src="https://cdn-icons-png.flaticon.com/512/1499/1499931.png" alt="buceo icono" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
+      <div class="w3-container w3-light-grey">
         <p><h5><b>Largos sin respirar</b></h5>
       <p>DEPORTE INDIVIDUAL <br>
       CATEGORÍAS:
@@ -379,7 +386,7 @@ Respira antes de empezar. Consigue hacer el mayor número de largos sin respirar
   <div class="w3-row-padding">
     <div class="w3-third w3-container w3-margin-bottom">
       <img src="https://cdn-icons-png.flaticon.com/512/3126/3126611.png" alt="saltos icono" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
+      <div class="w3-container w3-light-grey">
         <p><h5><b>Saltos</b></h5>
       <p>DEPORTE INDIVIDUAL <br>
       CATEGORÍAS:
@@ -395,7 +402,7 @@ Se escogerá al jurado al azar. Se dividirán los participantes y se les reparti
     </div>
     <div class="w3-third w3-container w3-margin-bottom">
       <img src="https://cdn-icons-png.flaticon.com/512/2817/2817719.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
+      <div class="w3-container w3-light-grey">
         <p><h5><b>Tiros a porteria</b></h5>
       <p>DEPORTE INDIVIDUAL <br>
       CATEGORÍAS
@@ -411,7 +418,7 @@ Eliminatoria de penaltis. Si metes un gol pasarás a la siguiente fase y si fall
     </div>
     <div class="w3-third w3-container">
       <img src="https://cdn-icons-png.flaticon.com/512/3131/3131763.png" alt="aros icono" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
+      <div class="w3-container w3-light-grey">
         <p><h5><b>Recoger aros</b></h5>
       <p>DEPORTE INDIVIDUAL <br>
       CATEGORÍAS
@@ -428,7 +435,7 @@ Eliminatoria de penaltis. Si metes un gol pasarás a la siguiente fase y si fall
     <div class="w3-row-padding">
     <div class="w3-third w3-container w3-margin-bottom">
       <img src="https://cdn-icons-png.flaticon.com/512/5496/5496293.png" alt="voleibol icono" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
+      <div class="w3-container w3-light-grey">
         <p><h5><b>Voleibol</b></h5>
       <p>DEPORTE EN EQUIPO <br>
       GRUPOS
@@ -444,7 +451,7 @@ El primer equipo en hacer 15 puntos ganará el partido <br>
     </div>
     <div class="w3-third w3-container w3-margin-bottom">
       <img src="https://cdn-icons-png.flaticon.com/512/1499/1499915.png" alt="waterpolo icono" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
+      <div class="w3-container w3-light-grey">
         <p><h5><b>Waterpolo</b></h5>
       <p>DEPORTE EN EQUIPO <br>
       GRUPOS
@@ -460,7 +467,7 @@ El primer equipo en hacer 15 puntos ganará el partido <br>
     </div>
     <div class="w3-third w3-container">
       <img src="https://cdn-icons-png.flaticon.com/512/7223/7223234.png" alt="palas icono" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
+      <div class="w3-container w3-light-grey">
         <p><h5><b>Palas</b></h5>
       <p>DEPORTE EN EQUIPO <br>
       GRUPOS
@@ -477,7 +484,7 @@ Consigue hacer el mayor número de toques con las palas sin que se caiga la pelo
     <div class="w3-row-padding">
     <div class="w3-third w3-container w3-margin-bottom">
       <img src="https://cdn-icons-png.flaticon.com/512/6287/6287010.png" alt="20 pases icono" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
+      <div class="w3-container w3-light-grey">
         <p><h5><b>20 pases</b></h5>
       <p>DEPORTE EN EQUIPO <br>
       GRUPOS
@@ -492,7 +499,7 @@ Consigue que tu equipo de 20 pases seguidos con un balón sin que el equipo cont
     </div>
     <div class="w3-third w3-container w3-margin-bottom">
       <img src="https://cdn-icons-png.flaticon.com/512/2481/2481306.png" alt="relevos icono" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
+      <div class="w3-container w3-light-grey">
         <p><h5><b>Relevos</b></h5>
       <p>DEPORTE EN EQUIPO <br>
       GRUPOS
@@ -505,19 +512,18 @@ Consigue que tu equipo de 20 pases seguidos con un balón sin que el equipo cont
 Consigue llegar el primero a la meta.Los grupos se dividirán y se colocarán en ambos extremos del largo de la piscina.Iniciará la carrera un jugador y tendrá que llegar a la otra orilla lo más rápido que pueda, cuando toque el bordillo, saltará el siguiente. Así hasta que el último del equipo llegue a la meta.</p>
       </div>
     </div>
-  </div>
+</p>
+</div>
 
-  <!-- Images of Me -->
-  <div class="w3-row-padding w3-padding-16" id="FORM" align="center">
- 
-  </div>
- <div class="well" align="center">
+  <!-- The Tour Section -->
+  <div class="w3-white" id="tour">
+  <br>
+    <div class="well">
   <div class="w3-container w3-padding-large" style="margin-bottom:32px">
     <h1 align="center"><b>FORMULARIOS</b></h1>
     <p>Si ya has echado un ojo a toda la página web, es hora de apuntarse a las actividades que más te hayan gustado.Para ello te dejamos aquí abajo dos formularios.<br>
      Uno de ellos es el individual, pensarás un nombre en clave(protección de datos). Si quieres que sea más divertido te recomiendo que no le digas a nadie tu apodo, de esa forma tampoco será posible amañar sorteor de posiciones.<br>
      El otro formulario es el de equipos, si tu equipo se quiere apuntar a alguna actividad solo será necesario que un miembro se registre.</p>
-    <hr>
   </div>
 </div>
      <div class="well" align="center">
@@ -532,58 +538,57 @@ Consigue llegar el primero a la meta.Los grupos se dividirán y se colocarán en
  </div>
 <br>
 <br>
+ </div>
+  </div>
 
-  <!-- Footer -->
-  <footer >
-
-  </footer>
   
-
-<!-- End page content -->
+  
+<!-- End Page Content -->
 </div>
 
+<!-- Image of location/map -->
+<img src="https://st3.depositphotos.com/8441656/14163/v/450/depositphotos_141631238-stock-illustration-three-champions-on-the-podium.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  
+</footer>
+
 <script>
-// Script to open and close sidebar
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-}
-// Set the date we're counting down to
-var countDownDate = new Date("Sep 3, 2022 11:00:00").getTime();
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
 
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-    
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-    
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-  // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-    
-  // If the count down is over, write some text 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
   }
-}, 1000);
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
 
-
+// Used to toggle the menu on small screens when clicking on the menu button
 function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+function sorteo() {
   alert("Esta página aún no está disponible. Se desbloqueará un día antes del evento. Siga navegando por la página");
 }
 </script>
