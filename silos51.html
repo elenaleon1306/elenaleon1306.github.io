@@ -77,6 +77,9 @@ img{
   <h2 align="center"><b>OLIMPIADAS SILOS 51</b><br>  VERANO 2022</h2>
     <img src="https://img.freepik.com/vrije-vector/organisch-plat-zomerscenespakket_23-2148952224.jpg?w=1380&t=st=1658566394~exp=1658566994~hmac=2e2cfc67361926e386fdc3f5588a80cf284b42fb290012f35d33f1c70e72c185" alt="carrera ida icono" style="width:100%">
   </div>
+  <div class="well" align="center">
+  <h1 id="demo"  class="card-body"></h1>
+</div>
    <div class=" w3-container" >
              <div class="well">
     <h4><b>Bienvenidos a la página de las 2º Olimpiadas de la urbanización.</b>
@@ -555,40 +558,38 @@ Consigue llegar el primero a la meta.Los grupos se dividirán y se colocarán en
 </footer>
 
 <script>
-// Automatic Slideshow - change image every 4 seconds
-var myIndex = 0;
-carousel();
 
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
+// Set the date we're counting down to
+var countDownDate = new Date("Sep 3, 2022 11:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
   }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 4000);    
-}
+}, 1000);
 
-// Used to toggle the menu on small screens when clicking on the menu button
+
 function myFunction() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-
-// When the user clicks anywhere outside of the modal, close it
-var modal = document.getElementById('ticketModal');
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-function sorteo() {
   alert("Esta página aún no está disponible. Se desbloqueará un día antes del evento. Siga navegando por la página");
 }
 </script>
