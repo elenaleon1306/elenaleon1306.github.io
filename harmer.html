@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-html,body,h1,h2,h3,h4,h5,h6 { 
+html,h1,h2,h3,h4,h5,h6 { 
 font-family: "Amatic SC", sans-serif
 }
 .button {background-color:white;
@@ -18,11 +18,31 @@ font-family: "Amatic SC", sans-serif
   width:100%;
 
 }
+table {
+   font-family: "Amatic SC", sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+   background-color:white;
+   text-align: center
+}
+
+td, th {
+  font-family: "Amatic SC", sans-serif;
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  text-align: center;
+}
+body{
+background-image: url("https://th.bing.com/th/id/R.087167534781c1acefc74ff96b3663dc?rik=x8QGssks9m%2fEvA&riu=http%3a%2f%2fimages.fashioninteriors.co.uk%2fimages%2fnproducts%2fscion%2ffabrics%2fmelinki_two%2flace%2fnmel120090.jpg&ehk=8svK03naW36gXH12NxYC64R5klKMPzSJ6diWhZdMgZI%3d&risl=&pid=ImgRaw&r=0");
+font-family: "Amatic SC", sans-serif
+}
 </style>
 </head>
-<body class="w3-light-grey">
+<body class="w3-lime">
 
 <!-- Page Container -->
+<br>
 <div class="w3-content w3-margin-top" style="max-width:1400px;">
 
   <!-- The Grid -->
@@ -47,7 +67,7 @@ font-family: "Amatic SC", sans-serif
           <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-lime"></i>INICIO</b></p>
           <br>
 
-          <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
+          <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-lime"></i>Languages</b></p>
           <p>English</p>
           <div class="w3-light-grey w3-round-xlarge">
             <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
@@ -66,12 +86,98 @@ font-family: "Amatic SC", sans-serif
 
     <!-- End Left Column -->
     </div>
-
+    <!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">INICIO</a>
+    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ACTIVIDADES</a>
+    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">FORMULARIOS</a>
+    <a onclick="sorteo()" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SORTEOS</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">PARTICIPANTES<i class="fa fa-caret-down"></i></button>  
+      
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a>   <div class=" w3-indigo w3-round-large"><p>·INDIVIDUALES=  <b>20</b></p></div></a>
+    <a><div class=" w3-indigo w3-round-large "><p>·EQUIPOS= <b>8</b></p></div></a>
+      </div>
+    </div>
+    
+  </div>
+</div>
     <!-- Right Column -->
     <div class="w3-twothird">
     
       <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-calendar fa-fw w3-margin-right w3-xxlarge w3-text-lime"></i>HORARIOS</h2>
+        <table style="width:100%" >
+  <tr>
+    <th style="background-color: #E6E6E6">HORA</th>
+    <th style="background-color: #E6E6E6">LUNES</th>
+    <th style="background-color: #E6E6E6">MARTES</th>
+    <th style="background-color: #E6E6E6">MIÉRCOLES</th>
+    <th style="background-color: #E6E6E6">JUEVES</th>
+    <th style="background-color: #E6E6E6">VIERNES</th>
+  </tr>
+  <tr>
+    <td style="background-color: #ECF6CE">8:30</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td style="background-color: #ECF6CE">9:15</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td style="background-color: #ECF6CE">10:00</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td style="background-color: #ECF6CE">10:45</td>
+    <td colspan="5" style="background-color: #E6E6E6"><b>RECREO</b>   
+  </tr>
+  <tr>
+    <td style="background-color: #ECF6CE">11:15</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td style="background-color: #ECF6CE">12:00</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td style="background-color: #ECF6CE">12:45</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td style="background-color: #ECF6CE">13:30</td>
+    <td colspan="5" style="background-color: #E6E6E6"><b>CASA</b>   
+  </tr>
+
+  
+</table>
         <div class="w3-container">
           <h5 class="w3-opacity"><b>Front End Developer / w3schools.com</b></h5>
           <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2015 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
@@ -121,7 +227,7 @@ font-family: "Amatic SC", sans-serif
   <!-- End Page Container -->
 </div>
 
-<footer class="w3-container w3-teal w3-center w3-margin-top">
+<footer class="w3-container w3-white w3-center w3-margin-top">
   <p>Find me on social media.</p>
   <i class="fa fa-facebook-official w3-hover-opacity"></i>
   <i class="fa fa-instagram w3-hover-opacity"></i>
