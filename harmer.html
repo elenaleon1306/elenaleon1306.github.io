@@ -69,11 +69,11 @@ font-family: "Amatic SC", sans-serif
     <!-- Accordion -->
       <div class="w3-card w3-round">
         <div class="w3-white">
-          <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> INICIO DE CURSO</button>
+          <button onclick="myFunction1('Demo1')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> INICIO DE CURSO</button>
           <div id="Demo1" class="w3-hide w3-container">
             <p id="demo"></p>
           </div>
-          <button onclick="myFunction('Demo3')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-users fa-fw w3-margin-right"></i> CALENDARIO ESCOLAR</button>
+          <button onclick="myFunction1('Demo3')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-users fa-fw w3-margin-right"></i> CALENDARIO ESCOLAR</button>
           <div id="Demo3" class="w3-hide w3-container">
          <div class="w3-row-padding">
          <br>
@@ -241,7 +241,7 @@ window.onclick = function(event) {
   }
 }
 // Accordion
-function myFunction(id) {
+function myFunction1(id) {
   var x = document.getElementById(id);
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
