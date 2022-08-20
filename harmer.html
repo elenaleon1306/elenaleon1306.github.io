@@ -72,7 +72,7 @@ font-family: "Amatic SC", sans-serif
            <div class="w3-half">
              <img src="https://doc.csit.es/api/image/stream/7941_2022_23_Calendario_escolar" style="width:100%" class="w3-margin-bottom">
            </div>
-          </div>
+        </div>
 
 
       </div>
@@ -80,8 +80,52 @@ font-family: "Amatic SC", sans-serif
   </div>
 </div>
 <br>
+   
+<!-- Alert Box -->
+      <div class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small w3-white">
+        <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l3 w3-display-topright">
+          <i class="fa fa-remove"></i>
+        </span>
+        <h3 align="center"><b>BUSCA EN WIKIPEDIA</b></h3>
+        <br>
+        <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Wikipedia-logo-v2-es.svg/1200px-Wikipedia-logo-v2-es.svg.png" alt="Avatar" style="width:50%"><br>
+    
+     <h4 align="center">
+      ¿QUÉ QUIERES BUSCAR?
+     </h4>
+   <input align="center" type="search" id="buscar"><br><br>
+   <button align="center" onclick="buscador()">BUSCAR</button>
+   <br>
+   <br>
+        </div>
+      </div>
       <br>
+      </div>
 
+      <!-- Alert Box 2-->
+      <div class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small w3-white">
+        <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l3 w3-display-topright">
+          <i class="fa fa-remove"></i>
+        </span>
+        <h3 align="center"><b>BUSCA UNA PALABRA</b></h3>
+        <br>
+        <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+          <img src="https://www.dykinson.com/static/img/portadas/9788467041897.jpg" alt="Avatar" style="width:50%"><br>
+    
+     <h4 align="center">
+      ¿QUÉ QUIERES BUSCAR?
+     </h4>
+   <input align="center" type="search" id="buscar"><br><br>
+   <button align="center" onclick="buscador2()">BUSCAR</button>
+   <br>
+   <br>
+        </div>
+      </div>
+      <br>
+      </div>
     <!-- End Left Column -->
     </div>
     <!-- Navbar -->
@@ -245,6 +289,16 @@ function myFunction1(id) {
     x.previousElementSibling.className = 
     x.previousElementSibling.className.replace(" w3-theme-d1", "");
   }
+}
+function buscador() {
+  var buscar = document.getElementById('buscar').value;
+  var buscarfull = "https://es.wikipedia.org/wiki/".concat("",buscar);
+  window.open(buscarfull)
+}
+function buscador2() {
+  var buscar = document.getElementById('buscar').value;
+  var buscarfull2 = "https://dle.rae.es/".concat("",buscar);
+  window.open(buscarfull2)
 }
 </script>
 </body>
