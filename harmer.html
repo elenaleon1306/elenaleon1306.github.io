@@ -37,7 +37,29 @@ body{
 background-image: url("https://th.bing.com/th/id/R.087167534781c1acefc74ff96b3663dc?rik=x8QGssks9m%2fEvA&riu=http%3a%2f%2fimages.fashioninteriors.co.uk%2fimages%2fnproducts%2fscion%2ffabrics%2fmelinki_two%2flace%2fnmel120090.jpg&ehk=8svK03naW36gXH12NxYC64R5klKMPzSJ6diWhZdMgZI%3d&risl=&pid=ImgRaw&r=0");
 font-family: "Amatic SC", sans-serif
 }
-img{
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  background-color: #E6E6E6;
+}
+div,img{
+   border-radius: 20px;
 }
 </style>
 </head>
@@ -46,6 +68,24 @@ img{
 <!-- Page Container -->
 <br>
 <div class="w3-content w3-margin-top" style="max-width:1400px;">
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-teal w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">INICIO</a>
+    <a href="#CLASE" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CLASE</a>
+    <a href="#VOLEIBOL" class="w3-bar-item w3-button w3-padding-large w3-hide-small">VOLEIBOL</a>
+    <a href="#APPS" class="w3-bar-item w3-button w3-padding-large w3-hide-small">APPS</a>
+</div>
+</div>
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-light-grey w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#CLASE" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CLASE</a>
+  <a href="#VOLEIBOL" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">VOLEIBOL</a>
+  <a href="#APPS" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">APPS</a>
+</div>
+<br>
+
 
   <!-- The Grid -->
   <div class="w3-row-padding">
@@ -80,15 +120,35 @@ img{
       </div>
     </div>
   </div>
+  <br>  
+   <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+        </div>
+        
+    <!-- Accordion -->
+      <div class="w3-card w3-round">
+         
+          <div id="Demo3" class="w3-hide w3-container">
+         <div class="w3-row-padding">
+         <br>
+           <div class="w3-half">
+             <img src="https://doc.csit.es/api/image/stream/7941_2022_23_Calendario_escolar" style="width:100%" class="w3-margin-bottom">
+           </div>
+        
+
+<br>
+<br>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
 <br>
-   
-<!-- Alert Box -->
-      <div class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small w3-white">
-        <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l3 w3-display-topright">
-          <i class="fa fa-remove"></i>
-        </span>
-        <h3 align="center"><b>BUSCA EN WIKIPEDIA</b></h3>
+<div class="w3-white w3-text-grey ">
+        <div class="w3-display-container">
+        </div>
+        <div class="w3-container">
+ <h3 align="center"><b>BUSCA EN WIKIPEDIA</b></h3>
         <br>
         <div class="w3-card w3-round w3-white w3-center">
         <div class="w3-container">
@@ -101,19 +161,10 @@ img{
    <button align="center" onclick="buscador()">BUSCAR</button>
    <br>
    <br>
-        </div>
-      </div>
-      <br>
-      </div>
-
-      <!-- Alert Box 2-->
-      <div class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small w3-white">
-        <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l3 w3-display-topright">
-          <i class="fa fa-remove"></i>
-        </span>
-        <h3 align="center"><b>BUSCA UNA PALABRA</b></h3>
-        <br>
-        <div class="w3-card w3-round w3-white w3-center">
+ </div>
+</div>
+<br>
+<div class="w3-card w3-round w3-white w3-center">
         <div class="w3-container">
           <img src="https://www.dykinson.com/static/img/portadas/9788467041897.jpg" alt="Avatar" style="width:50%"><br>
     
@@ -127,31 +178,31 @@ img{
         </div>
       </div>
       <br>
+    <!-- Accordion -->
+      <div class="w3-card w3-round">
+
+          <div id="Demo3" class="w3-hide w3-container">
+         <div class="w3-row-padding">
+         <br>
+           <div class="w3-half">
+             <img src="https://doc.csit.es/api/image/stream/7941_2022_23_Calendario_escolar" style="width:100%" class="w3-margin-bottom">
+           </div>
+        </div>
+
+
       </div>
+    </div>
+  </div>
+</div>
+<br>
     <!-- End Left Column -->
     </div>
-    <!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-card">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">INICIO</a>
-    <a href="#CLASE" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CLASE</a>
-    <a href="#VOLEIBOL" class="w3-bar-item w3-button w3-padding-large w3-hide-small">VOLEIBOL</a>
-    <a href="#APPS" class="w3-bar-item w3-button w3-padding-large w3-hide-small">APPS</a>
-</div>
-</div>
-<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-<div id="navDemo" class="w3-bar-block w3-light-grey w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="#CLASE" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CLASE</a>
-  <a href="#VOLEIBOL" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">VOLEIBOL</a>
-  <a href="#APPS" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">APPS</a>
-</div>
+    
     <!-- Right Column -->
     <div class="w3-twothird" id=CLASE>
     
       <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <br>
-        <br>
+       
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-calendar fa-fw w3-margin-right w3-xxlarge w3-text-lime"></i>HORARIO</h2>
         <table style="width:100%" >
   <tr>
@@ -283,6 +334,42 @@ img{
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-lime"></i>APPS</h2>
         <div class="w3-container">
           <h5 class="w3-opacity"><b>Escoge la aplicación que quieras</b></h5>
+          <div class="gallery">
+  <a target="_blank" href="https://colegiosimonbolivar.edu.ve/csb2/wp-content/uploads/sites/4/2019/07/dual-diploma-840x430.jpg">
+    <img src="https://colegiosimonbolivar.edu.ve/csb2/wp-content/uploads/sites/4/2019/07/dual-diploma-840x430.jpg" alt="Cinque Terre" width="100%">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="https://th.bing.com/th/id/R.c6308f29b71616bef873e5696254a796?rik=lxMS5FFSF0t1aA&riu=http%3a%2f%2fcolegioborja.es%2fwp-content%2fuploads%2feducamos.jpg&ehk=L4Y8mnwNWuTSG8fRngq%2fR6%2b2Y8iK1Rtaw%2bQJdFly6jM%3d&risl=&pid=ImgRaw&r=0">
+    <img src="https://th.bing.com/th/id/R.c6308f29b71616bef873e5696254a796?rik=lxMS5FFSF0t1aA&riu=http%3a%2f%2fcolegioborja.es%2fwp-content%2fuploads%2feducamos.jpg&ehk=L4Y8mnwNWuTSG8fRngq%2fR6%2b2Y8iK1Rtaw%2bQJdFly6jM%3d&risl=&pid=ImgRaw&r=0" alt="Cinque Terre" width="100%">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="https://img.unocero.com/2019/05/como-usar-puto-segun-rae-2-1-840x473.jpg">
+    <img src="https://th.bing.com/th/id/R.852cb3bc511578c4b9b7dfdf7e67d2ec?rik=njm1GgyExktFHw&pid=ImgRaw&r=0" alt="Cinque Terre" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="img_5terre.jpg">
+    <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="img_5terre.jpg">
+    <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="img_5terre.jpg">
+    <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
           <hr>
         </div>
       </div>
