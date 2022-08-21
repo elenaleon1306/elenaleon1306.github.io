@@ -169,7 +169,36 @@ div,img{
   color: black;
   border-radius: 0px;
 }
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
 
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.container .btn {
+  position: absolute;
+  top: 80%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #ECF6CE;
+  color: black;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.container .btn:hover {
+  background-color:#CEF6F5;
+}
 </style>
 </head>
 <body class="w3-lime">
@@ -313,37 +342,37 @@ div,img{
    
            <tr>
     <th >P1</th>
-    <th ></th>
-    <th ></th>
-    <th ></th>
+    <th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+    <th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+    <th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
   </tr>
   <tr>
-    <th >P2</th>
-    <th ></th>
-    <th ></th>
-    <th ></th>
+    <th ondrop="drop(event)" ondragover="allowDrop(event)">P2</th>
+    <th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+    <th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
+    <th ondrop="drop(event)" ondragover="allowDrop(event)"></th>
   </tr>
 </table>
 
 <br>
           <div id="mydiv">
-  <div id="mydivheader">ESTUDIO</div>
+  <div id="mydivheader" draggable="true" ondragstart="drag(event)">ESTUDIO</div>
 </div>
 
 <div id="mydiv1">
-  <div id="mydivheader1">DESCANSO</div>
+  <div id="mydivheader1" id="drag1" draggable="true" ondragstart="drag(event)">DESCANSO</div>
 </div>
 <div id="mydiv2">
-  <div id="mydivheader2">DESCANSO</div>
+  <div id="mydivheader2" id="drag2" draggable="true" ondragstart="drag(event)">DESCANSO</div>
 </div>
 <div id="mydiv3">
-  <div id="mydivheader3">TRABAJOS</div>
+  <div id="mydivheader3" id="drag3" draggable="true" ondragstart="drag(event)">TRABAJOS</div>
 </div>
 <div id="mydiv4">
-  <div id="mydivheader4">DEBERES</div>
+  <div id="mydivheader4" id="drag4" draggable="true" ondragstart="drag(event)">DEBERES</div>
 </div>
 <div id="mydiv5">
-  <div id="mydivheader5">ESTUDIO</div>
+  <div id="mydivheader5" id="drag6" draggable="true" ondragstart="drag(event)">ESTUDIO</div>
 </div>
           
 <br>
@@ -497,9 +526,32 @@ div,img{
   <br>
      
 
+   
+<div class="w3-container w3-card w3-white">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-th-large fa-fw w3-margin-right w3-xxxlarge w3-text-lime"></i>APPS</h2>
+        <div class="w3-container">
+          <div class="container">
+  <img src="https://colegiosimonbolivar.edu.ve/csb2/wp-content/uploads/sites/4/2019/07/dual-diploma-840x430.jpg" alt="Snow" style="width:100%">
+  <button class="btn" onclick="diploma()">ENTRAR</button>
+</div>
+<br>
+<div class="container">
+  <img src="https://www.aeeuropa.com/images/Logo-Educamos_blanco1.jpg" alt="Snow" style="width:100%">
+  <button class="btn" onclick="educamos()">ENTRAR</button>
+</div>
+<br>
+<div class="container">
+  <img src="https://3.bp.blogspot.com/-Ii-YEbtV43o/WZZohsMm3_I/AAAAAAAAAIc/iJeNrgoAy-gdx3zRqX6xDbd5sxPEcmqagCLcBGAs/s1600/renderforest_logo.jpg" alt="Snow" style="width:100%">
+  <button class="btn" onclick="renderforest()">ENTRAR</button>
+</div>
+   
+          
+<br>
+<hr>
     </div>
-  </div>
 
+  <br>
+     
     <!-- End Right Column -->
     </div>
     
@@ -852,7 +904,31 @@ function dragElement(elmnt) {
     document.onmousemove = null;
   }
 }
+function allowDrop(ev) {
+  ev.preventDefault();
+}
 
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+function diploma() {
+   var dualdiploma = "https://si.agilixbuzz.com/student/home/courses"
+  window.open(dualdiploma)  
+}
+function educamos() {
+   var educamos = "https://santajoaquinadevedruna-fec-madrid.educamos.com/"
+  window.open(educamos)  
+}
+function renderforest() {
+   var educamos = "https://www.renderforest.com/es/animation-maker"
+  window.open(renderforest)  
+}
 </script>
 </body>
 </html>
