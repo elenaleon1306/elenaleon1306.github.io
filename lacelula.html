@@ -1,107 +1,204 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>TÍTULO</title>
+<title>La unidad de vida</title>
 <link href="https://cerebriti.b-cdn.net/uploads/cddc17ebad77e6a971e5b5c8f41f8de3.png" rel="icon">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family:  "Monaco", monospace;}
-
-body, html {
-  height: 100%;
-  line-height: 1.8;
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ <style>
+body,h1,h2,h3,h4,h5 {
+  font-family: "Monaco", monospace;
+  background-color:light grey;
+}
+}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+p.c {
+  white-space: pre;
 }
 
-/* Full height image header */
-.bgimg-1 {
-  background-position: center;
-  background-size: cover;
-  background-image: url("https://th.bing.com/th/id/R.93c4b056e3fbb6533b8679793afee2fc?rik=6%2fGjIXRP0k%2f%2buA&riu=http%3a%2f%2fcdn.wallpapersafari.com%2f35%2f35%2f9Qla8M.jpg&ehk=0gsG88xlRSvfi6ZS9Ctks5HC%2fe%2fK%2bFoT3EKmOFScNTA%3d&risl=&pid=ImgRaw&r=0");
-  min-height: 100%;
+table, th, td {
+    border-radius: 20px;
+  border: 1px solid white ;
+  border-collapse: collapse;
+  border-radius: 20px;
 }
-
-.w3-bar .w3-button {
-  padding: 16px;
+th, td {
+  background-color:#ADD8E6;
+  border-radius: 20px;
+  border-spacing:10 px;
 }
-.mySlides {display:none;}
+.well{
+  border-radius: 20px;
+}
+.a {
+  background-color:lightblue
+}
 </style>
 </head>
 <body>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="#INICIO" class="w3-bar-item w3-button w3-wide">INICIO</a>
-    <!-- Right-sided navbar links -->
-    <div class="w3-right w3-hide-small">
-      <a href="#PUNTO 1" class="w3-bar-item w3-button"><i class="fa fa-square-o"></i>PUNTO 1</a>
-      <a href="#PUNTO 2" class="w3-bar-item w3-button"><i class="fa fa-square-o"></i>PUNTO 2</a>
-      <a href="#PUNTO 3" class="w3-bar-item w3-button"><i class="fa fa-square-o"></i>PUNTO 3</a>
-      <a href="#PUNTO 4" class="w3-bar-item w3-button"><i class="fa fa-square-o"></i>PUNTO 4</a>
-      <a href="#PUNTO 5" class="w3-bar-item w3-button"><i class="fa fa-square-o"></i>PUNTO 5</a>
-      <a href="#PUNTO 6" class="w3-bar-item w3-button"><i class="fa fa-square-o"></i>PUNTO 6</a>
-    </div>
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-lime w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar">
  
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="well" align="center">
+    <img align="center" src="https://cerebriti.b-cdn.net/uploads/cddc17ebad77e6a971e5b5c8f41f8de3.png" width="70%">
+    <h3><b>LA UNIDAD<br>DE VIDA</b></h3>
+  </div>
+  <P>
+    <div class="well" align="center">
+  <div class="w3-bar-block">
 
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
-    </a>
+    <a href="#INICIO" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-lime">INICIO</a> 
+    <a href="#PUNTO 1" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-ligth-blue">ORGANIZANDO LA MATERIA</a> 
+    <a href="#PUNTO 2" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-ligth-blue">INVESTIGANDO EL ORIGEN</a> 
+    <a href="#PUNTO 3" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-ligth-blue">CLASIFICANDO LA CÉLULA</a> 
+    <a href="#PUNTO 4" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-ligth-blue">ESTRUCTURANDO LOS COMPONENTES</a> 
+    <a href="#PUNTO 5" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-ligth-blue">ALIMENTANDO A LA CÉLULA</a>
+    <a href="#PUNTO 6" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-ligth-blue">DESCUBRIENDO LOS TIPOS DE CÉLULAS</a>
   </div>
 </div>
-
-<!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">CERRAR ×</a>
-  <a href="#PUNTO 1" onclick="w3_close()" class="w3-bar-item w3-button">PUNTO 1</a>
-  <a href="#PUNTO 2" onclick="w3_close()" class="w3-bar-item w3-button">PUNTO 2</a>
-  <a href="#PUNTO 3" onclick="w3_close()" class="w3-bar-item w3-button">PUNTO 3</a>
-  <a href="#PUNTO 4" onclick="w3_close()" class="w3-bar-item w3-button">PUNTO 4</a>
-  <a href="#PUNTO 5" onclick="w3_close()" class="w3-bar-item w3-button">PUNTO 5</a>
-  <a href="#PUNTO 6" onclick="w3_close()" class="w3-bar-item w3-button">PUNTO 5</a>
+</P>
 </nav>
-<!-- Header with full-height image -->
-<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
-  <div class="w3-display-left w3-text-white" style="padding:48px">
-    <span class="w3-jumbo w3-hide-small">VUELTA A LA CÉLULA</span><br>
-    <span class="w3-large">SLOGAN( POR PENSAR)</span>
-    <p><a href="#video" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">TEXTO DE ENLACE AL VIDEO</a></p>
-  </div> 
-</header>
-<div>
 
-<!-- Footer -->
-<footer class="w3-center w3-grey w3-padding-32">
-</footer>
- 
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-lime w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-lime w3-margin-right" onclick="w3_open()">☰</a>
+  <span>TÍTULO</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+      <div class="well" id="INICIO">
+    <h1 class="w3-jumbo" align="center" ><b>LAS CÉLULAS</b></h1>
+  </div>
+    <div>
+<table>
+  <tr>
+  <td align="center" rowspan="6" class="w3-white">
+<img src="https://static.vecteezy.com/system/resources/previews/000/419/741/original/vector-plant-cell-with-cell-membrane.jpg" width="80%" />
+</td>
+<td class="w3-yellow" align="center" colspan="2">
+<b>¿QUÉ ES UNA CÉLULA?</b><br>
+</td>
+</tr>
+<tr>
+
+</tr>
+<tr>
+  <td class="w3-lime" align="center">
+   Las células son las unidades de vida más pequeñas que encontramos en los seres vivos.
+  </td>
+   <td class="w3-lime" align="center">
+Estas están formadas por moléculas.
+  </td>
+</tr>
+<tr>
+</tr>
+ <td class="w3-lime" align="center">
+   Son microscópicas de modo que no se pueden a ver a simple vista, para verlas necesitamos un microscopio.
+  </td>
+  <td class="w3-lime" align="center" >
+    En función de las células que tenga un ser vivo podemos encontrar organismos unicelulares como las bacterias o pluricelulares como los animales o las plantas.
+  </td>
+</tr>
+</table>
+  </div>
+
+  <br>
+  <br>
+        <div class="well" id="PUNTO 1">
+    <h2 align="center"><b>1.ORGANIZANDO LA MATERIA</b></h2>
+  </div>
+  <table style="width:100%" align="center">
+  <tr>
+    <td align="center"><b>1.ÁTOMO</b> <br>
+    La unidad más pequeña de la materia.<br>
+    <img src="https://cdn-icons-png.flaticon.com/512/471/471509.png" width="30%"></td>
+    <td align="center" class="w3-yellow"><b>2.MOLÉCULA</b><br>
+    Grupo de átomos.
+  <br>
+    <img src="https://cdn-icons-png.flaticon.com/512/2106/2106435.png" width="30%"></td></td>
+    <td align="center"><b>3.CÉLULA</b><br>
+
+    La unidad de vida más pequeña.
+  <br>
+    <img src="https://cdn-icons-png.flaticon.com/512/8046/8046222.png" width="30%"></td></td>
+  </tr>
+  <tr>
+    <td align="center" class="w3-yellow"><b>4.TEJIDO</b><br>
+    Grupo de células similares con una función combinada y específica.
+  <br>
+    <img src="https://cdn-icons-png.flaticon.com/512/7908/7908988.png" width="30%"></td></td>
+    <td align="center"><b>5.ÓRGANO</b><br>
+    Grupo de tejidos con una función determinada y especifica.<br>
+    <img src="https://cdn-icons-png.flaticon.com/512/2295/2295189.png" width="30%"></td></td>
+    <td align="center" class="w3-yellow"><b>6.SISTEMA</b><br>
+    Grupo de órganos que actúan de manera coordinada.<br>
+    <img src="https://cdn-icons-png.flaticon.com/512/3465/3465521.png" width="40%"></td></td>
+  </tr>
+  <tr>
+    <td align="center"><b>7.ORGANISMO</b><br>
+    A nivel multicelular es un ser vivo individual.<br>
+    <img src="https://cdn-icons-png.flaticon.com/512/8149/8149682.png" width="40%"></td></td>
+    <td align="center" class="w3-yellow"><b>8.ESPECIE</b><br>
+    Grupo de organismos con características similares y la habilidad de relacionarse.<br>
+    <img src="https://cdn-icons-png.flaticon.com/128/2730/2730423.png" width="30%"></td></td>
+    <td align="center"><b>9.POBACIÓN</b><br>
+    Grupo de individuos de la misma especie que vive en el mismo lugar.<br>
+    <img src="https://cdn-icons-png.flaticon.com/128/951/951123.png" width="30%"></td></td>
+  </tr>
+    <tr>
+    <td align="center" class="w3-yellow"><b>10.COMUNIDAD</b><br>
+    Grupo de población que viven en el mismo lugar y tienen relación con otros.<br>
+    <img src="https://cdn-icons-png.flaticon.com/128/2170/2170765.png" width="30%"></td></td>
+    <td align="center"><b> 11.ECOSISTEMA</b><br>
+    Área formada por una comunidad y el medioambiente que rodea el hábitat.<br>
+    <img src="https://cdn-icons-png.flaticon.com/128/4078/4078427.png" width="30%"></td></td>
+    <td align="center" class="w3-yellow"><b>12.BIOSFERA</b><br>
+    Todos los seres vivos que habitan en la Tierra.<br>
+    <img src="https://cdn-icons-png.flaticon.com/128/3456/3456847.png" width="40%"></td></td>
+  </tr>
+</table>
+<br>
+   <div class="well" id="PUNTO 2">
+    <h2 align="center"><b>2.INVESTIGANDO EL ORIGEN</b></h2>
+  </div>
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right"><b>Creado por:</b> María Moreno Cantó y Elena León Martínez.
+
 <script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
 // Modal Image Gallery
 function onClick(element) {
   document.getElementById("img01").src = element.src;
   document.getElementById("modal01").style.display = "block";
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
-}
-
-
-// Toggle between showing and hiding the sidebar when clicking the menu icon
-var mySidebar = document.getElementById("mySidebar");
-
-function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-  } else {
-    mySidebar.style.display = 'block';
-  }
-}
-
-// Close the sidebar with the close button
-function w3_close() {
-    mySidebar.style.display = "none";
 }
 </script>
 
