@@ -46,7 +46,7 @@ th, td {
 }
 /* The actual timeline (the vertical ruler) */
 .timeline {
-  position: relative;
+  position:relative;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -69,20 +69,6 @@ th, td {
   position: relative;
   background-color: inherit;
   width: 50%;
-}
-
-/* The circles on the timeline */
-.container::after {
-  content: '';
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  right: -17px;
-  background-color: white;
-  border: 4px solid yellow;
-  top: 15px;
-  border-radius: 50%;
-  z-index: 1;
 }
 
 /* Place the container to the left */
@@ -147,7 +133,7 @@ th, td {
   .container {
   width: 100%;
   padding-left: 70px;
-  padding-right: 25px;
+  padding-right:70px;
   }
   
   /* Make sure that all arrows are pointing leftwards */
@@ -165,6 +151,9 @@ th, td {
   
   /* Make all right containers behave like the left ones */
   .right {
+  left: 0%;
+  }
+   .left {
   left: 0%;
   }
 }
@@ -260,7 +249,7 @@ p, h2{
 <!-- Top menu on small screens -->
 <header class="w3-container w3-top w3-hide-large w3-lime w3-xlarge w3-padding">
   <a href="javascript:void(0)" class="w3-button w3-lime w3-margin-right" onclick="w3_open()">☰</a>
-  <span>LA UNIDAD DE VIDA<br> ( Es recomendable ver la web en horizontal)</span>
+  <span align="center">LA UNIDAD DE VIDA</span>
 </header>
 
 <!-- Overlay effect when opening sidebar on small screens -->
@@ -375,7 +364,7 @@ p, h2{
     <h2 align="center"><b>INVESTIGANDO EL ORIGEN</b></h2>
   </div>
   <br>
-  <div class="timeline">
+  <div class="timeline" align="center">
   <div class="container left">
     <div class="content">
       <h2>2017</h2>
