@@ -22,14 +22,11 @@ p.c {
 }
 
 table, th, td {
-    border-radius: 20px;
   border: 1px solid white ;
   border-collapse: collapse;
-  border-radius: 20px;
 }
 th, td {
   background-color:#ADD8E6;
-  border-radius: 20px;
   border-spacing:10 px;
 }
 .well{
@@ -119,7 +116,6 @@ th, td {
   padding: 20px 30px;
   background-color: white;
   position: relative;
-  border-radius: 6px;
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
@@ -212,19 +208,36 @@ th, td {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-  border-radius: 10PX;
 }
 img{
-border-radius: 20PX;
+border-radius: 10PX;
 }
 .img3
  {width: 40%;}
 
 p, h2,h4{
-  border-radius:10px;
 }
 .borde {
   border-color: black;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 30px;
+  height:400px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+      border-radius:10px;
 }
 </style>
 </head>
@@ -306,7 +319,7 @@ p, h2,h4{
     <h5 align="center" ><b>VÍDEO</b></h5>
   </div>
   <div class="well" >
-    <h5 align="center" ><b>TESTS</b></h5>
+    <h5 align="center" ><b>TEST</b></h5>
   </div>
   </div>
 </div>
@@ -367,6 +380,10 @@ p, h2,h4{
   </tr>
 </table>
 <br>
+  <div class="well" >
+    <h5 align="center" ><b>TEST</b></h5>
+  </div>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd87j-EBcLCGMFlrp_KaMDQWwMoDG3FFwl8H8NL6HYTci_5iw/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
 </div>
 <div  id="PUNTO 2" class="tabcontent">
    <div class="well" id="PUNTO 2">
@@ -386,7 +403,7 @@ p, h2,h4{
   </div>
   <div class="container right">
     <div class="content">
-      <h4><b>ANTON VAN LEEUWENHOEK</b></h4>
+      <h3><b>ANTON VAN LEEUWENHOEK</b></h3>
       <p>Al ver la demanda del micorscopio de Zacharias decidió crearse el suyo propio. Con el podía ver todo (comida, ropa...) pero lo utilizó para ver la boca de la gente y enonces encontró unas pequeñas bacterias a las que llamó <b>animalejos</b> porque parecían animales.</p>
       <img src="https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photo/12364794/image/4f398f6d96f81f67018c7b4cb71afde5" width="50%">
       <br>
@@ -440,6 +457,11 @@ p, h2,h4{
 </table>
 <br>
 <br>
+  <div class="well" >
+    <h5 align="center" ><b>TEST</b></h5>
+  </div>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdf19HX2vGHu4jfkmufbydLK7o3kPbtwllZz1mJ_OO-SEeV2A/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+
 </div>
 <div  id="PUNTO 3" class="tabcontent">
   <div class="well" id="PUNTO 3">
@@ -468,6 +490,10 @@ p, h2,h4{
   <img class="img3"src="https://cdn-icons-png.flaticon.com/512/4178/4178764.png">
 </div>
   <br>
+
+    <div class="well" >
+    <h5 align="center" ><b>TEST</b></h5>
+  </div>
 </div>
 <div  id="PUNTO 4" class="tabcontent">
     <div class="well" id="PUNTO 4">
@@ -578,19 +604,62 @@ p, h2,h4{
   </tr>
 </table>
 <br>
-<br>
+
+  <div class="well" >
+    <h5 align="center" ><b>TEST</b></h5>
+  </div>
 </div>
 <div  id="PUNTO 5" class="tabcontent">
     <div class="well" id="PUNTO 5">
     <h2 align="center"><b>ALIMENTANDO A LA CÉLULA</b></h2>
   </div>
   <br>
+      <h2 align="center" class="w3-yellow">TIPOS DE NUTRICIÓN CELULAR</h2>
+     <p class="w3-lime" align="center">Las células se dividen en:</p>
+<div class="row" align="center">
+  <div class="column" style="background-color:yellow;">
+    <h2>AUTÓTROFAS</h2>
+    <p>Las células elaboran sus porpios compuestos orgánicos como lípidos a partir de la materia inorgánica como el agua que incorporan del medio.<BR>
+      <b>SE NECESITA ENERGÍA.</b></p>
+      <img src="https://cdn-icons-png.flaticon.com/512/7388/7388348.png" width="30%">
+  </div>
+  <div class="column" style="background-color:#ADD8E6;">
+    <h2>HETERÓTROFAS</h2>
+    <p>Las células obtienen materia orgánica e inorgánica del medio. Si ingieren una molécula demasiado grande, los lisosomas deberán digerirla.</p>
+    <br>
+    <img src="https://cdn-icons-png.flaticon.com/512/3045/3045399.png" width="30%">
+  </div>
+</DIV>
+<BR>
+  <h2 align="center" class="w3-yellow">¿CÓMO OBTIENEN ENERGÍA LAS CÉLULAS?</h2>
+     <p class="w3-lime" align="center">Las células obtienen energía mediante dos procesos:</p>
+<div class="row" align="center">
+  <div class="column" style="background-color:yellow;">
+    <h2>RESPIRACIÓN CELULAR</h2>
+    <p>Las células utilizan el oxígeno para liberar la energía que tienen los compuestos orgánicos.Para este proceso, las mitocondrias son muy importantes.Este proceso necesita oxígeno y da como resultado dióxido de carbono y agua.</p>
+      <img src="https://cdn-icons-png.flaticon.com/512/3000/3000485.png" width="30%">
+  </div>
+  <div class="column" style="background-color:#ADD8E6;">
+    <h2>FERMENTACIÓN</h2>
+    <p>Hay células que pueden liberar la energia creada por los compuestos orgánicos sin oxígeno. A esto se le conoce como fermentación y es producido en el citosol, de todas formas, es un proceso incompleto de modo que se libera menos energía que en la respiración celular.Hay más desechos.</p>
+
+    <img src="https://cdn-icons-png.flaticon.com/512/1748/1748083.png" width="30%">
+  </div>
+</div>
+<br>
+    <div class="well" >
+    <h5 align="center" ><b>TEST</b></h5>
+  </div>
 </div>
 <div  id="PUNTO 6" class="tabcontent">
     <div class="well" id="PUNTO 6">
     <h2 align="center"><b>DESCUBRIENDO TIPOS DE CÉLULAS</b></h2>
   </div>
   <br>
+
+    <div class="well" >
+    <h5 align="center" ><b>TEST</b></h5>
+  </div>
 </div>
 <!-- End page content -->
 </div>
