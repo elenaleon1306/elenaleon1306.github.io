@@ -226,6 +226,43 @@ p, h2,h4{
 .borde {
   border-color: black;
 }
+.dropbtn {
+  background-color: #ADD8E6;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color:yellow;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
 </style>
 </head>
 <body>
@@ -304,6 +341,89 @@ p, h2,h4{
   </div>
   <div class="well" >
     <h5 align="center" ><b>TESTS</b></h5>
+</div>
+<table align="center">
+<tr>
+<td>
+	<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">ORGANIZANDO LA MATERIA</button>
+  <div id="myDropdown" class="dropdown-content">
+  <h2>HOLA</h2>
+  </div>
+</div>
+</td>
+<td>
+<br>
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">INVESTIGANDO EL ORIGEN</button>
+  <div id="myDropdown" class="dropdown-content">
+  <h2>HOLA</h2>
+  </div>
+</div>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">CLASIFICANDO LAS CÉLULAS</button>
+  <div id="myDropdown" class="dropdown-content">
+  <h2>HOLA</h2>
+  </div>
+</div>
+<br>
+</td>
+<td>
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">ESTRUCTURANDO LOS COMPONENTES</button>
+  <div id="myDropdown" class="dropdown-content">
+  <h2>HOLA</h2>
+  </div>
+</div>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">ALIMENTNADO A LA CÉLULA</button>
+  <div id="myDropdown" class="dropdown-content">
+  <h2>HOLA</h2>
+  </div>
+</div>
+<br>
+</td>
+<td>
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">DESCUBRIENDO LOS TIPOS DE CÉLULAS</button>
+  <div id="myDropdown" class="dropdown-content">
+  <h2>HOLA</h2>
+  </div>
+</div>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">TEST GENERAL</button>
+  <div id="myDropdown" class="dropdown-content">
+  <h2>HOLA</h2>
+  </div>
+</div>
+<br>
+</td>
+<td>
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">VALORACIÓN DE LA PÁGINA WEB</button>
+  <div id="myDropdown" class="dropdown-content">
+  <h2>HOLA</h2>
+  </div>
+</div>
+<br>
+</td>
+</tr>
+</table>
   </div>
   </div>
 </div>
@@ -665,6 +785,25 @@ function vegetal(){
 }
 function tipos(){
   window.open("https://www.canva.com/design/DAFMUdMZoR8/2YhDHbhd1RAamfDP6poN9A/view?utm_content=DAFMUdMZoR8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink")
+}
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
 }
 </script>
 
