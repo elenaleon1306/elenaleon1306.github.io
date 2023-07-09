@@ -22,7 +22,7 @@ div,h1 {background-color: #00CED1;}
 <!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar w3-card w3-left-align w3-large">
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu">Menú<i class="fa fa-bars"></i></a>
+   <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars">Menú</i></a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-white">Inicio</a>
     <a href="#actividades" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Actividades</a>
     <a href="#sorteos" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Sorteos</a>
@@ -32,18 +32,14 @@ div,h1 {background-color: #00CED1;}
 </a>
 </div>
   </div>
-
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-light-grey w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="#actividades" class="w3-bar-item w3-button w3-padding-large">Actividades</a>
-      <a href="#actividades" class="w3-bar-item w3-button w3-padding-large">Actividades</a>
-    <a href="#sorteos" class="w3-bar-item w3-button w3-padding-large">Sorteos</a>
-    <a href="#formularios" class="w3-bar-item w3-button w3-padding-large">Formularios</a>
-    <a href="#medallero" class="w3-bar-item w3-button w3-padding-large">Medallero</a>
-    <a href="#mas" class="w3-bar-item w3-button w3-padding-large">Más</a>
-  </div>
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-light-grey w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#actividades" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Actividades</a>
+  <a href="#sorteos" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Sorteos</a>
+  <a href="#formularios" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Formularios</a>
+  <a href="#medallero" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Medallero</a>
+  <a href="#mas" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Más</a>
 </div>
-
 <!-- Header -->
 <header class="w3-container w3-center" style="padding:66px 16px">
 <div class="well" align="center">
@@ -133,6 +129,14 @@ function myFunction() {
     x.className += " w3-show";
   } else { 
     x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
   }
 }
 // Set the date we're counting down to
