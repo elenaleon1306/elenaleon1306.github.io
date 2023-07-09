@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>S51 2023</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: 'Rajdhani', sans-serif}
+.w3-bar,h1,button {font-family: 'Rajdhani', sans-serif}
+.fa-anchor,.fa-coffee {font-size:300px}
+div {background-color: #00CED1;}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu">Menú<i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-white">Inicio</a>
+    <a href="#actividades" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Actividades</a>
+    <a href="#sorteos" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Sorteos</a>
+    <a href="#formularios" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Formularios</a>
+    <a href="#medallero" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Medallero</a>
+    <a><div class="well" align="center">
+  <h1 id="demo"  class="card-body" font-size="300px"></h1>
+</div></a>
+</div>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-light-grey w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#actividades" class="w3-bar-item w3-button w3-padding-large">Actividades</a>
+    <a href="#sorteos" class="w3-bar-item w3-button w3-padding-large">Sorteos</a>
+    <a href="#formularios" class="w3-bar-item w3-button w3-padding-large">Formularios</a>
+    <a href="#medallero" class="w3-bar-item w3-button w3-padding-large">Medallero</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-center" style="padding:66px 16px">
+  <div style="position: relative; width: 100%; height: 0; padding-top: 141.4286%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFoId0e4KQ&#x2F;view?embed">
+  </iframe>
+</div>
+</header>
+ <div class="w3-center" style="position: centre; width: 100%; height: 0; padding-top: 250.0000%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFoIEhQ8nk&#x2F;view?embed">
+  </iframe>
+</div>
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">  
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+// Set the date we're counting down to
+var countDownDate = new Date("Sep 2, 2023 11:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "LLEGÓ EL DÍA";
+  }
+}, 1000);
+
+
+</script>
+
+</body>
+</html>
